@@ -6,6 +6,7 @@
 video-as-code/   核心：生产框架 + 素材库 + 32 个视频工程
 components/      通用组件与资产（Discord 组件、头像、动画表情、原型沙盒）
 sop/             中文生产 SOP 与项目模板
+skills/          独立使用的 AI 视频前期策划 Skill
 ```
 
 ## 跑起来
@@ -48,6 +49,10 @@ Remotion 工程会打开 Remotion Studio，Vite 工程会起浏览器预览页�
 硬规则：脚本/计划/素材没批准之前不写代码；屏与屏按计划顺序推进；每屏只保留一个主动效。
 
 完整说明见 [`video-as-code/README.md`](video-as-code/README.md) / [中文版](video-as-code/README-zh.md)。
+
+## 前期策划 Skill
+
+[`skills/ai-video-preproduction/SKILL.md`](skills/ai-video-preproduction/SKILL.md) 根据阿哲 Phil 的[商业广告片编导思维教程](https://x.com/Formulasearch/article/2122893489885397274)提炼，帮助理解产品、选择片型、构思剧本和检查成片。它聚焦前期策划，不包含原文尚未展开的生图、视频生成和剪辑操作。在 Codex 中可将该目录放入 `~/.codex/skills/` 使用。
 
 ## 视频工程
 
