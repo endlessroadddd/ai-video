@@ -1,0 +1,40 @@
+{
+  "caseSlug": "case-study-dubbingai-discord",
+  "results": [
+    {
+      "sceneId": "scene-setup",
+      "status": "skipped",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\04-preview\\generated\\scene-setup.request.json"
+    },
+    {
+      "sceneId": "scene-overload",
+      "status": "skipped",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\04-preview\\generated\\scene-overload.request.json"
+    },
+    {
+      "sceneId": "scene-lucius",
+      "status": "skipped",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\04-preview\\generated\\scene-lucius.request.json"
+    },
+    {
+      "sceneId": "scene-loop",
+      "status": "skipped",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\04-preview\\generated\\scene-loop.request.json"
+    },
+    {
+      "sceneId": "scene-results",
+      "status": "skipped",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\04-preview\\generated\\scene-results.request.json"
+    },
+    {
+      "sceneId": "scene-human",
+      "status": "skipped",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\04-preview\\generated\\scene-human.request.json"
+    },
+    {
+      "sceneId": "scene-method",
+      "status": "skipped",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\04-preview\\generated\\scene-method.request.json"
+    }
+  ]
+}

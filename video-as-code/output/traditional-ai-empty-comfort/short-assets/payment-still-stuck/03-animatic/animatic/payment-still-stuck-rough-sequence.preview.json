@@ -1,0 +1,59 @@
+{
+  "assetSlug": "payment-still-stuck",
+  "type": "rough-sequence-review",
+  "durationTarget": 9,
+  "aspectRatio": "16:9",
+  "soundMode": "silent-first",
+  "brandRole": "closing-tag",
+  "sequenceGoal": "Show the user asking for payment help, getting empty comfort instead of action, then prove the product is still blocked.",
+  "proofShot": "The payment UI is still loading or failed after the assistant already claimed the issue was solved.",
+  "beats": [
+    {
+      "order": 1,
+      "beatId": "beat-01-problem",
+      "purpose": "Establish the high-stakes user complaint immediately.",
+      "copyLine": "Payment still fails after 3 days.",
+      "durationHint": "2.2s",
+      "proofBinding": [
+        "payment failed",
+        "3 days"
+      ]
+    },
+    {
+      "order": 2,
+      "beatId": "beat-02-empty-comfort",
+      "purpose": "Show the assistant giving comfort without help.",
+      "copyLine": "We've received your issue.",
+      "durationHint": "2.0s",
+      "proofBinding": [
+        "issue already received"
+      ]
+    },
+    {
+      "order": 3,
+      "beatId": "beat-03-fake-resolution",
+      "purpose": "Escalate the frustration by showing a fake resolution.",
+      "copyLine": "It says solved.",
+      "durationHint": "2.1s",
+      "proofBinding": [
+        "problem solved"
+      ]
+    },
+    {
+      "order": 4,
+      "beatId": "beat-04-proof",
+      "purpose": "Prove that the product is still blocked.",
+      "copyLine": "Still stuck.",
+      "durationHint": "2.7s",
+      "proofBinding": [
+        "still stuck",
+        "payment failed"
+      ]
+    }
+  ],
+  "reviewQuestions": [
+    "Does the hook land in the first second?",
+    "Does the sequence only serve one takeaway?",
+    "Is the proof shot clear before the asset ends?"
+  ]
+}

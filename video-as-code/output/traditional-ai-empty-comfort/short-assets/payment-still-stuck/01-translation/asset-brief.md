@@ -1,0 +1,32 @@
+# Payment Still Stuck Asset Brief
+
+## Single Takeaway
+
+Soft AI reassurance is useless when the actual payment problem is still unresolved.
+
+## Tension
+
+- The user is trying to pay and has already been blocked for three days.
+- The assistant sounds supportive but never provides useful help.
+- The moment becomes worse when the assistant claims the issue is solved and the product is still stuck.
+
+## Proof
+
+- `3 days`
+- `payment failed`
+- `issue already received`
+- `problem solved`
+- `still stuck`
+
+## Audience
+
+- Founders
+- Product teams
+- Customer support leaders
+- People who have experienced empty AI support
+
+## Non-goals
+
+- Do not make this a full Lucius explainer.
+- Do not turn the sequence into competitor callout content.
+- Do not soften the payment proof shot.

@@ -1,0 +1,93 @@
+{
+  "caseSlug": "case-study-dubbingai-discord",
+  "scenes": [
+    {
+      "sceneId": "scene-setup",
+      "headline": "DubbingAI",
+      "supportCopy": "30K-member Discord community",
+      "microcopy": "A fast-growing product community where support volume started outpacing the team.",
+      "labels": [
+        "Discord",
+        "30K Members",
+        "Product Support"
+      ],
+      "timingNotes": "Headline lands early; labels remain visible through the hold."
+    },
+    {
+      "sceneId": "scene-overload",
+      "headline": "The same questions kept coming back.",
+      "supportCopy": "Repeated setup questions, escalation burden, and a small team staying on-call all the time.",
+      "microcopy": "All hands responding",
+      "labels": [
+        "Repeated Questions",
+        "Escalation Queue",
+        "3 Human Mods"
+      ],
+      "timingNotes": "Question-card content should become legible as the stack densifies."
+    },
+    {
+      "sceneId": "scene-lucius",
+      "headline": "Lucius learns from actual community behavior.",
+      "supportCopy": "Repeated questions become structured support logic. Noisy activity resolves into reusable patterns.",
+      "microcopy": "",
+      "labels": [
+        "Live Inputs",
+        "Lucius",
+        "Structured Outputs"
+      ],
+      "timingNotes": "Headline and column labels must remain readable at hold."
+    },
+    {
+      "sceneId": "scene-loop",
+      "headline": "Lucius keeps improving.",
+      "supportCopy": "Four-step learning system",
+      "microcopy": "",
+      "labels": [
+        "Onboard from history",
+        "Learn in the flow",
+        "Optimize over time",
+        "Escalate edge cases"
+      ],
+      "timingNotes": "Card titles should remain readable after the loop completes one cycle."
+    },
+    {
+      "sceneId": "scene-results",
+      "headline": "Real operating-model change.",
+      "supportCopy": "",
+      "microcopy": "",
+      "labels": [
+        "30K Members",
+        "80% Automation",
+        "15 Days",
+        "3 -> 0 Human Mods",
+        "24/7 Coverage"
+      ],
+      "timingNotes": "Metrics must hold long enough for silent viewing."
+    },
+    {
+      "sceneId": "scene-human",
+      "headline": "Lucius basically gave me my holidays back.",
+      "supportCopy": "Support Status",
+      "microcopy": "Team on holiday. Support still running.",
+      "labels": [
+        "Answer delivered",
+        "Repeat question resolved",
+        "Edge case escalated"
+      ],
+      "timingNotes": "Quote should settle before the holiday marker appears."
+    },
+    {
+      "sceneId": "scene-method",
+      "headline": "Better support keeps the room alive.",
+      "supportCopy": "Lucius helps create the conditions for a living community that can sustain participation.",
+      "microcopy": "",
+      "labels": [
+        "general",
+        "help",
+        "showcase",
+        "announcements"
+      ],
+      "timingNotes": "Longest clean read in the sequence; no new motion after the headline settles."
+    }
+  ]
+}

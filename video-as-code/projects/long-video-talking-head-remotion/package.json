@@ -1,0 +1,41 @@
+{
+  "name": "long-video-talking-head-remotion",
+  "version": "1.0.0",
+  "description": "Transparent Remotion overlay animations for Lucius.",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.454",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.454"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.454",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "typescript": "5.7.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render YuChengLowerThird ../渲染输出/yu-cheng-lower-third-transparent-2k.mov --image-format=png --pixel-format=yuva444p10le --codec=prores --prores-profile=4444",
+    "render:webm": "remotion render YuChengLowerThird ../渲染输出/yu-cheng-lower-third-transparent.webm --image-format=png --pixel-format=yuva420p --codec=vp9",
+    "still": "remotion still YuChengLowerThird --scale=0.25 --frame=96",
+    "render:logo": "remotion render LuciusLogoType ../渲染输出/lucius-logo-type-transparent-2k.mov",
+    "render:logo:webm": "remotion render LuciusLogoType ../渲染输出/lucius-logo-type-transparent.webm --image-format=png --pixel-format=yuva420p --codec=vp9",
+    "still:logo": "remotion still LuciusLogoType --scale=0.25 --frame=30",
+    "render:lower-third": "remotion render YuChengLowerThird ../渲染输出/yu-cheng-lower-third-transparent-2k.mov --image-format=png --pixel-format=yuva444p10le --codec=prores --prores-profile=4444",
+    "render:blank-bg": "remotion render YuChengLowerThirdBlackBg ../渲染输出/yu-cheng-lower-third-black-bg-2k-60fps.mp4 --codec=h264 --pixel-format=yuv420p",
+    "render:lower-third:webm": "remotion render YuChengLowerThird ../渲染输出/yu-cheng-lower-third-transparent.webm --image-format=png --pixel-format=yuva420p --codec=vp9",
+    "still:lower-third": "remotion still YuChengLowerThird --scale=0.25 --frame=96",
+    "upgrade": "remotion upgrade",
+    "lint": "eslint src && tsc"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}

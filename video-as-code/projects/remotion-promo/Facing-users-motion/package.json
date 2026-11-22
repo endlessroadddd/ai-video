@@ -1,0 +1,27 @@
+{
+  "name": "facing-users-motion",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx remotion studio src/index.ts --port=3005",
+    "render:reply": "npx remotion render src/index.ts ResponseEngine out/response-engine.mp4",
+    "render:followup": "npx remotion render src/index.ts EventTriggerMesh out/event-trigger-mesh.mp4",
+    "render:handoff": "npx remotion render src/index.ts LearningTrustLoop out/learning-trust-loop.mp4",
+    "render:brief": "npx remotion render src/index.ts JourneyRouter out/journey-router.mp4",
+    "render:framework": "npx remotion render src/index.ts FrameworkFlattening out/framework-flattening.mp4",
+    "render:payment-still-stuck": "npx remotion render src/index.ts PaymentStillStuck out/payment-still-stuck.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.261",
+    "@remotion/google-fonts": "4.0.261",
+    "@remotion/player": "4.0.261",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.261"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.28",
+    "@types/react-dom": "^18.3.7",
+    "typescript": "^5.7.0"
+  }
+}

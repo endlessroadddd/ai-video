@@ -1,0 +1,20 @@
+{
+  "name": "@lucius-vac/pipeline-tools",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "index:libraries": "tsx src/commands/index-libraries.ts",
+    "preview:storyboard": "tsx src/commands/generate-storyboard-preview.ts",
+    "preview:animatic": "tsx src/commands/generate-animatic-preview.ts",
+    "assert:stage": "tsx src/commands/assert-stage.ts",
+    "assert:asset-stage": "tsx src/commands/assert-asset-stage.ts",
+    "assert:script-asset-stage": "tsx src/commands/assert-script-asset-stage.ts",
+    "test": "tsx --test src/lib/material-library-catalog.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.15",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,245 @@
+.lucius-payment-failure-stage {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 100%;
+  place-items: center;
+  padding: 52px 64px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 18%, rgb(99 127 178 / 14%) 0%, rgb(99 127 178 / 0%) 28%),
+    radial-gradient(circle at 82% 14%, rgb(255 255 255 / 52%) 0%, rgb(255 255 255 / 0%) 24%),
+    radial-gradient(circle at 72% 82%, rgb(120 147 196 / 10%) 0%, rgb(120 147 196 / 0%) 24%),
+    linear-gradient(180deg, #eef2f7 0%, #e7ecf4 100%);
+  color: #17181c;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+.lucius-payment-failure-stage__shell {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(1180px, 100%);
+  grid-template-columns: minmax(240px, 0.88fr) minmax(420px, 0.98fr);
+  gap: 44px;
+  align-items: center;
+}
+
+.lucius-payment-failure-stage__summary {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  padding: 12px 8px 12px 0;
+}
+
+.lucius-payment-failure-stage__eyebrow,
+.lucius-payment-failure-stage__panel-label {
+  color: #6a7384;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.lucius-payment-failure-stage__title {
+  max-width: 8.5ch;
+  margin: 0;
+  color: #16181d;
+  font-size: clamp(40px, 4.1vw, 54px);
+  font-weight: 640;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.lucius-payment-failure-stage__summary-copy {
+  max-width: 360px;
+  margin: 0;
+  color: #5a6475;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.lucius-payment-failure-stage__summary-card {
+  display: grid;
+  width: min(280px, 100%);
+  gap: 6px;
+  padding: 16px 18px;
+  border: 1px solid rgb(144 156 178 / 14%);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgb(255 255 255 / 74%) 0%, rgb(247 249 253 / 64%) 100%);
+  box-shadow:
+    0 18px 38px rgb(15 23 42 / 7%),
+    inset 0 0 0 1px rgb(255 255 255 / 54%);
+  backdrop-filter: blur(18px);
+}
+
+.lucius-payment-failure-stage__summary-card span,
+.lucius-payment-failure-stage__panel-row-label {
+  color: #667286;
+  font-size: 14px;
+}
+
+.lucius-payment-failure-stage__summary-card strong {
+  color: #17181c;
+  font-size: 19px;
+  font-weight: 620;
+}
+
+.lucius-payment-failure-stage__panel {
+  display: grid;
+  gap: 22px;
+  padding: 30px 30px 28px;
+  border: 1px solid rgb(154 167 190 / 14%);
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgb(255 255 255 / 92%) 0%, rgb(250 252 255 / 88%) 100%);
+  box-shadow:
+    0 24px 60px rgb(24 34 56 / 12%),
+    0 6px 18px rgb(24 34 56 / 5%),
+    inset 0 0 0 1px rgb(255 255 255 / 58%);
+}
+
+.lucius-payment-failure-stage__panel-header {
+  display: grid;
+  gap: 8px;
+}
+
+.lucius-payment-failure-stage__panel-header h3 {
+  margin: 0;
+  color: #15171b;
+  font-size: 30px;
+  font-weight: 640;
+  letter-spacing: -0.038em;
+}
+
+.lucius-payment-failure-stage__panel-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgb(245 248 252 / 98%) 0%, rgb(239 243 249 / 92%) 100%);
+  box-shadow:
+    inset 0 0 0 1px rgb(26 32 44 / 6%),
+    0 6px 18px rgb(108 129 163 / 6%);
+}
+
+.lucius-payment-failure-stage__panel-row strong {
+  color: #17181c;
+  font-size: 16px;
+  font-weight: 620;
+}
+
+.lucius-payment-failure-stage__cta-wrap {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.lucius-payment-failure-stage__cta {
+  height: 54px;
+  border: 0;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #3b76ef 0%, #2d63dd 100%);
+  box-shadow:
+    0 14px 30px rgb(45 99 221 / 22%),
+    inset 0 1px 0 rgb(255 255 255 / 22%);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 620;
+  letter-spacing: -0.01em;
+}
+
+.lucius-payment-failure-stage__cta-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lucius-payment-failure-stage__spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgb(255 255 255 / 28%);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: lucius-payment-failure-stage-spinner 0.9s linear infinite;
+}
+
+.lucius-payment-failure-stage__error {
+  display: grid;
+  min-height: 44px;
+  align-content: center;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  background: rgb(255 255 255 / 0%);
+  color: #c0353d;
+  font-size: 14px;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.lucius-payment-failure-stage__cursor {
+  position: absolute;
+  z-index: 3;
+}
+
+.lucius-payment-failure-stage__cursor-icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  color: #12151c;
+  filter: drop-shadow(0 10px 12px rgb(17 23 35 / 18%));
+}
+
+.lucius-payment-failure-stage__cursor-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.lucius-payment-failure-stage[data-state="clicking"] .lucius-payment-failure-stage__cta {
+  animation: lucius-payment-failure-stage-press 1180ms cubic-bezier(0.2, 0.92, 0.28, 1) both;
+}
+
+.lucius-payment-failure-stage[data-state="loading"] .lucius-payment-failure-stage__cta {
+  background: linear-gradient(135deg, #3566d2 0%, #284fb2 100%);
+}
+
+.lucius-payment-failure-stage[data-state="error"] .lucius-payment-failure-stage__error {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: rgb(192 53 61 / 16%);
+  background: rgb(192 53 61 / 8%);
+}
+
+@keyframes lucius-payment-failure-stage-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lucius-payment-failure-stage-press {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  14% {
+    transform: translateY(1px) scale(0.985);
+  }
+
+  32% {
+    transform: translateY(0) scale(1);
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "caseSlug": "traditional-ai-empty-comfort",
+  "assetSlug": "payment-still-stuck",
+  "beatId": "beat-04-proof",
+  "type": "beat-keyframe-review",
+  "singleTakeaway": "Soft AI reassurance is useless when the actual payment problem is still unresolved.",
+  "purpose": "Prove that the product is still blocked.",
+  "copyLine": "Still stuck.",
+  "durationHint": "2.7s",
+  "visualState": [
+    "Cut to the payment UI.",
+    "The button or payment state is still stuck, loading, or failed."
+  ],
+  "motionCue": [
+    "Hard cut away from chat into product UI.",
+    "Motion slows into a dead-stop hold on the unresolved state."
+  ],
+  "proofBinding": [
+    "still stuck",
+    "payment failed"
+  ],
+  "matchType": "fresh-design",
+  "assetBindingIds": [],
+  "templateBindingIds": [],
+  "fallbackImplementation": [
+    "Build a credible checkout or payment panel where the blocked state is undeniable at first glance."
+  ],
+  "hardConstraints": [
+    "Keep the asset within 6-10 seconds and optimize for silent-first readability.",
+    "The failing payment state must be the most visually credible proof shot in the sequence.",
+    "The generic AI assistant surface must not resemble Lucius branding or Lucius UI language.",
+    "Use Lucius brand discipline for composition quality and motion restraint, but do not make the broken assistant feel like Lucius.",
+    "No flashy AI magic, neon beams, or over-the-top glitch effects."
+  ],
+  "reviewQuestions": [
+    "Is the beat understandable at first glance?",
+    "Does the copy fit the duration hint?",
+    "Is the proof binding visible enough?"
+  ]
+}

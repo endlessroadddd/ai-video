@@ -1,0 +1,39 @@
+{
+  "caseSlug": "case-study-dubbingai-discord",
+  "assetSlug": "discord-support-relief",
+  "beatId": "beat-01-hook",
+  "type": "beat-keyframe-review",
+  "singleTakeaway": "Lucius takes repetitive Discord support off the human team.",
+  "purpose": "Establish support overload immediately.",
+  "copyLine": "Support never stops.",
+  "durationHint": "1.8s",
+  "visualState": [
+    "Repetitive Discord support questions stack rapidly.",
+    "Unread and issue markers spike in a tight crop."
+  ],
+  "motionCue": [
+    "Question cards stack bottom-to-top.",
+    "Badges pulse once to create pressure."
+  ],
+  "proofBinding": [
+    "30K members"
+  ],
+  "matchType": "fresh-design",
+  "assetBindingIds": [],
+  "templateBindingIds": [],
+  "fallbackImplementation": [
+    "Build a compact Discord-like support surface with tight unread density."
+  ],
+  "hardConstraints": [
+    "Follow the Lucius color system: #5538C7, #BAB2FF, #B268D8, #1B4038, #E1DAC0.",
+    "Use SF Pro or a close system fallback for labels, UI text, metrics, and explanatory copy.",
+    "Use Recoleta or a close editorial serif fallback only for key headlines, brand moments, and the final principle scene.",
+    "No flicker, blank flash frames, or abrupt pop-in unless storyboarded.",
+    "No exaggerated AI magic beams, sweeps, or glow effects."
+  ],
+  "reviewQuestions": [
+    "Is the beat understandable at first glance?",
+    "Does the copy fit the duration hint?",
+    "Is the proof binding visible enough?"
+  ]
+}

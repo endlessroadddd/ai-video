@@ -1,0 +1,115 @@
+{
+  "assetSlug": "payment-still-stuck",
+  "singleTakeaway": "Soft AI reassurance is useless when the actual payment problem is still unresolved.",
+  "hook": "Show the blocked payment problem first, then expose the empty comfort, then prove the product is still stuck.",
+  "screens": [
+    {
+      "screenId": "screen-01-problem",
+      "purpose": "Establish the payment failure and the three-day delay immediately.",
+      "uiSurface": "community support chat",
+      "layoutSnapshot": "A left-aligned complaint bubble dominates the chat column, with a muted timestamp and minimal thread chrome around it.",
+      "background": "Warm neutral support surface with soft depth and restrained UI framing.",
+      "keyElements": [
+        "Complaint bubble with payment-failure text",
+        "Muted support thread chrome",
+        "Small timestamp marker"
+      ],
+      "primaryMotion": "The user complaint card enters and locks attention.",
+      "copyHint": "Payment still fails after 3 days.",
+      "durationHint": "2.2s"
+    },
+    {
+      "screenId": "screen-02-empty-comfort",
+      "purpose": "Show the assistant replying with comfort instead of action.",
+      "uiSurface": "assistant reply bubble in the same community chat",
+      "layoutSnapshot": "A single assistant reply bubble sits directly under the complaint and takes over the visual center with one short reassurance line.",
+      "background": "The same warm neutral chat surface remains still so the reply bubble is the only moving focus.",
+      "keyElements": [
+        "Assistant avatar marker",
+        "Soft reply bubble",
+        "Short reassurance line"
+      ],
+      "primaryMotion": "The empty comfort reply expands softly into view.",
+      "copyHint": "We've received your issue.",
+      "durationHint": "2.0s"
+    },
+    {
+      "screenId": "screen-03-fake-resolution",
+      "purpose": "Escalate frustration with a fake solved message.",
+      "uiSurface": "quick user pushback plus assistant reply",
+      "layoutSnapshot": "A compact resolved status chip lands above a short closing reply, visually shutting down the thread.",
+      "background": "The chat frame stays calm and static so the resolved state reads as the only active event.",
+      "keyElements": [
+        "Resolved status chip",
+        "Short closing reply",
+        "Collapsed thread boundary"
+      ],
+      "primaryMotion": "The false resolved state lands with abrupt closure.",
+      "copyHint": "It says solved.",
+      "durationHint": "2.1s"
+    },
+    {
+      "screenId": "screen-04-proof",
+      "purpose": "Prove the payment flow is still blocked.",
+      "uiSurface": "product payment UI",
+      "layoutSnapshot": "A centered payment panel fills most of the frame with the amount, action area, and a stuck loading state clearly visible.",
+      "background": "Warm neutral product surface with a quiet gradient and no competing accents, so the blocked payment state dominates.",
+      "keyElements": [
+        "Payment amount row",
+        "Stuck loading spinner",
+        "Disabled or blocked action area"
+      ],
+      "primaryMotion": "Hard cut into the stuck payment panel, then dead-stop hold.",
+      "copyHint": "Still stuck.",
+      "durationHint": "2.7s"
+    }
+  ],
+  "persistentConstraints": {
+    "brandConstraints": {
+      "colorRoles": [
+        "Use neutral off-brand colors for the broken assistant UI.",
+        "Reserve stronger contrast for payment failure and blocked states.",
+        "Use Lucius purple only as a restrained closing-tag quality cue."
+      ],
+      "typeRoles": [
+        "Use sans-serif only in the negative example UI.",
+        "Use one strong headline layer with restrained support labels.",
+        "Keep any Lucius closing tag secondary."
+      ],
+      "radiusRules": [
+        "Use soft, consistent rounded corners across chat and payment surfaces.",
+        "Do not mix incompatible corner languages."
+      ],
+      "backgroundRules": [
+        "Use a warm neutral background with quiet depth.",
+        "Keep the background restrained so the proof element remains dominant."
+      ],
+      "graphicLanguage": [
+        "Use clean SaaS UI surfaces and minimal chrome.",
+        "Avoid decorative clutter or joke framing."
+      ],
+      "motionTone": [
+        "Motion should feel quietly confident and readable.",
+        "The final proof state should end in a dead-stop hold."
+      ],
+      "prohibitedPatterns": [
+        "No flashy AI magic or glitch spectacle.",
+        "No overlapping text blocks.",
+        "No competing animated elements on the same screen."
+      ]
+    },
+    "baseMotionConstraints": {
+      "onePrimaryMotionPerScreen": true,
+      "lessIsMore": true,
+      "minimalCopy": true,
+      "noTextOverlap": true,
+      "singleProofPath": true,
+      "quietlyConfidentMotion": true
+    }
+  },
+  "nonGoals": [
+    "Do not make the piece comedic or meme-like.",
+    "Do not let comfort copy feel like actual support value.",
+    "Do not make the broken assistant look like Lucius."
+  ]
+}

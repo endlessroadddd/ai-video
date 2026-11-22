@@ -1,0 +1,42 @@
+{
+  "hardConstraints": [
+    "Follow the Lucius color system: #5538C7, #BAB2FF, #B268D8, #1B4038, #E1DAC0.",
+    "Use SF Pro or a close system fallback for labels, UI text, metrics, and explanatory copy.",
+    "Use Recoleta or a close editorial serif fallback only for key headlines, brand moments, and the final principle scene.",
+    "No flicker, blank flash frames, or abrupt pop-in unless storyboarded.",
+    "No exaggerated AI magic beams, sweeps, or glow effects."
+  ],
+  "allowedOptimizations": [
+    "Refine spacing rhythm and negative space to improve scanability.",
+    "Use subtle dot-grid or halftone structure when it supports composition.",
+    "Vary stagger timing to keep motion alive without adding clutter."
+  ],
+  "prohibitedDeviations": [
+    "Do not drift from the Lucius brand palette.",
+    "Do not use serif typography for body text or dense UI labels.",
+    "Do not create multiple competing focal points in a single scene.",
+    "Do not place logos with shadows, outlines, stretching, or low contrast."
+  ],
+  "layoutRules": [
+    "One primary reading path per scene.",
+    "Use generous negative space and card spacing.",
+    "Avoid muddy low-contrast surfaces.",
+    "Keep Discord and Lucius iconography integrated into one visual system."
+  ],
+  "motionRules": [
+    "Motion should be calm, deliberate, and readable.",
+    "Supporting motion should not compete with the focal path.",
+    "No unnecessary overlap between scenes.",
+    "No generic HUD clutter."
+  ],
+  "typeRules": [
+    "Sans for UI, metrics, and operational text.",
+    "Serif only for deliberate editorial emphasis.",
+    "Keep serif moments rare."
+  ],
+  "colorRules": [
+    "Warm Ivory and soft white should dominate the field.",
+    "Lucius Purple and Deep Moss should act as signal colors.",
+    "Maintain strong foreground/background contrast."
+  ]
+}

@@ -1,0 +1,116 @@
+import type { AvatarSourceMap } from "./avatar-types";
+
+const FIXED_AVATAR_SEED = "LUCIUS_AVATAR_SEED_V1";
+
+const FIXED_AVATAR_IDENTITIES = [
+  "president",
+  "novacos",
+  "stitchpilot",
+  "kirascene",
+  "ivyflux",
+  "moonveil",
+  "velvetrin",
+  "aurapins",
+  "seamwitch",
+  "maskloop",
+  "cuekeeper",
+  "clubrunner",
+  "nighthem",
+  "mirafold",
+  "iristhread",
+  "backrowfox",
+  "glintmuse",
+  "echoquill",
+] as const;
+
+const avatarModuleMap = import.meta.glob("../../assets/anime-avatars/*.{png,jpg,jpeg,webp}", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+
+function hashString(value: string): number {
+  let hash = 2166136261;
+  for (const character of value) {
+    hash ^= character.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function createRandom(seed: number): () => number {
+  let state = seed >>> 0;
+  return () => {
+    state += 0x6d2b79f5;
+    let result = state;
+    result = Math.imul(result ^ (result >>> 15), result | 1);
+    result ^= result + Math.imul(result ^ (result >>> 7), result | 61);
+    return ((result ^ (result >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function shuffle<T>(items: readonly T[], random: () => number): T[] {
+  const shuffled = [...items];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex]!, shuffled[index]!];
+  }
+  return shuffled;
+}
+
+export function normalizeAvatarName(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+const avatarImagePaths = Object.keys(avatarModuleMap).sort((left, right) =>
+  left.localeCompare(right),
+);
+
+const allAvatarImageSources = avatarImagePaths.map((path) => avatarModuleMap[path]!);
+
+if (allAvatarImageSources.length < FIXED_AVATAR_IDENTITIES.length) {
+  throw new Error(
+    `[avatar] Missing images: expected at least ${FIXED_AVATAR_IDENTITIES.length}, got ${allAvatarImageSources.length}.`,
+  );
+}
+
+const seededRandom = createRandom(hashString(FIXED_AVATAR_SEED));
+const shuffledAvatarImageSources = shuffle(allAvatarImageSources, seededRandom);
+const selectedAvatarImageSources = shuffledAvatarImageSources.slice(
+  0,
+  FIXED_AVATAR_IDENTITIES.length,
+);
+
+if (new Set(selectedAvatarImageSources).size !== selectedAvatarImageSources.length) {
+  throw new Error("[avatar] Avatar selection contains duplicate image URLs.");
+}
+
+const fixedAvatarSourceMap: AvatarSourceMap = {};
+FIXED_AVATAR_IDENTITIES.forEach((identity, index) => {
+  fixedAvatarSourceMap[identity] = selectedAvatarImageSources[index]!;
+});
+
+const mappedUniqueImageCount = new Set(Object.values(fixedAvatarSourceMap)).size;
+if (mappedUniqueImageCount !== FIXED_AVATAR_IDENTITIES.length) {
+  throw new Error("[avatar] Fixed avatar mapping is not one-to-one.");
+}
+
+export const avatarIdentityNames = [...FIXED_AVATAR_IDENTITIES];
+export const avatarImageCount = allAvatarImageSources.length;
+export const mappedAvatarCount = FIXED_AVATAR_IDENTITIES.length;
+export const mappedAvatarUniqueImageCount = mappedUniqueImageCount;
+
+export function getAvatarImageMap(): AvatarSourceMap {
+  return { ...fixedAvatarSourceMap };
+}
+
+export function getAvatarImageSource(name: string): string {
+  const normalizedName = normalizeAvatarName(name);
+  const fixedSource = fixedAvatarSourceMap[normalizedName];
+  if (fixedSource) {
+    return fixedSource;
+  }
+
+  const fallbackKey = normalizedName || "user";
+  const fallbackIndex = hashString(fallbackKey) % selectedAvatarImageSources.length;
+  return selectedAvatarImageSources[fallbackIndex]!;
+}

@@ -1,0 +1,104 @@
+{
+  "assetSlug": "payment-still-stuck",
+  "sequenceGoal": "Show the user asking for payment help, getting empty comfort instead of action, then prove the product is still blocked.",
+  "durationTarget": 9,
+  "aspectRatio": "16:9",
+  "soundMode": "silent-first",
+  "brandRole": "closing-tag",
+  "beats": [
+    {
+      "beatId": "beat-01-problem",
+      "purpose": "Establish the high-stakes user complaint immediately.",
+      "visualState": [
+        "Community support chat is open.",
+        "The user's complaint is visible with emphasis on payment and three days of failure."
+      ],
+      "motionCue": [
+        "User message slides in and key pain phrases gain subtle emphasis.",
+        "Nearby support clutter stays secondary."
+      ],
+      "copyLine": "Payment still fails after 3 days.",
+      "durationHint": "2.2s",
+      "proofBinding": [
+        "payment failed",
+        "3 days"
+      ],
+      "matchType": "fresh-design",
+      "assetBindingIds": [],
+      "templateBindingIds": [],
+      "fallbackImplementation": [
+        "Build a generic community support panel with one dominant complaint card and restrained UI chrome."
+      ]
+    },
+    {
+      "beatId": "beat-02-empty-comfort",
+      "purpose": "Show the assistant giving comfort without help.",
+      "visualState": [
+        "The AI support reply appears polished, friendly, and useless.",
+        "The reply centers on reassurance rather than action."
+      ],
+      "motionCue": [
+        "Reply card expands softly into view.",
+        "Key reassurance language lingers longer than the useful information because there is no useful information."
+      ],
+      "copyLine": "We've received your issue.",
+      "durationHint": "2.0s",
+      "proofBinding": [
+        "issue already received"
+      ],
+      "matchType": "fresh-design",
+      "assetBindingIds": [],
+      "templateBindingIds": [],
+      "fallbackImplementation": [
+        "Keep the assistant response visually competent but semantically empty."
+      ]
+    },
+    {
+      "beatId": "beat-03-fake-resolution",
+      "purpose": "Escalate the frustration by showing a fake resolution.",
+      "visualState": [
+        "The user asks for an actual fix.",
+        "The assistant replies that the issue is solved."
+      ],
+      "motionCue": [
+        "User pushback appears quickly.",
+        "The 'problem solved' reply lands with a false sense of closure."
+      ],
+      "copyLine": "It says solved.",
+      "durationHint": "2.1s",
+      "proofBinding": [
+        "problem solved"
+      ],
+      "matchType": "fresh-design",
+      "assetBindingIds": [],
+      "templateBindingIds": [],
+      "fallbackImplementation": [
+        "Use a tight exchange where the fake resolution feels abrupt and obviously premature."
+      ]
+    },
+    {
+      "beatId": "beat-04-proof",
+      "purpose": "Prove that the product is still blocked.",
+      "visualState": [
+        "Cut to the payment UI.",
+        "The button or payment state is still stuck, loading, or failed."
+      ],
+      "motionCue": [
+        "Hard cut away from chat into product UI.",
+        "Motion slows into a dead-stop hold on the unresolved state."
+      ],
+      "copyLine": "Still stuck.",
+      "durationHint": "2.7s",
+      "proofBinding": [
+        "still stuck",
+        "payment failed"
+      ],
+      "matchType": "fresh-design",
+      "assetBindingIds": [],
+      "templateBindingIds": [],
+      "fallbackImplementation": [
+        "Build a credible checkout or payment panel where the blocked state is undeniable at first glance."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "assetSlug": "thought-you-were-staff",
+  "singleTakeaway": "Lucius can sound human enough to be mistaken for a teammate, and the conversation never needs a human handoff.",
+  "hook": "Two half-screen phone frames are already live when the right-side message begins typing.",
+  "screens": [
+    {
+      "screenId": "screen-01-question-send",
+      "purpose": "Establish the dual-device premise and make the support conversation feel live.",
+      "uiSurface": "full-bleed Lucius stage with two half-screen phones already in frame",
+      "layoutSnapshot": "Left phone is Lucius and right phone is the user, both cropped by the frame edges and angled toward center while the right composer is active.",
+      "background": "Warm Ivory field with restrained Lucius atmosphere and subtle depth.",
+      "keyElements": [
+        "Two phone frames",
+        "Live headers",
+        "Right-side composer",
+        "User message bubble"
+      ],
+      "primaryMotion": "The right-side message types and sends.",
+      "copyHint": "Also, your product is really good. Why did you build it?",
+      "durationHint": "1.45s"
+    },
+    {
+      "screenId": "screen-02-lucius-answer",
+      "purpose": "Let Lucius's answer land as a natural, human-feeling response.",
+      "uiSurface": "same dual-phone stage with focus shifted slightly toward the Lucius device",
+      "layoutSnapshot": "The user message sits in the right phone history while the left phone composer shows a thinking state before the Lucius reply appears.",
+      "background": "Same stage, slightly calmer on the user side.",
+      "keyElements": [
+        "Lucius composer thinking state",
+        "Lucius reply bubble",
+        "Subtle left-side brand presence"
+      ],
+      "primaryMotion": "The Lucius answer generates into view.",
+      "copyHint": "Haha, thank you. We kept seeing the same support questions, so we built the product we wished we'd had.",
+      "durationHint": "1.75s"
+    },
+    {
+      "screenId": "screen-03-human-assumption",
+      "purpose": "Show the user assuming Lucius is a real support person.",
+      "uiSurface": "same dual-phone stage with right phone reactivated",
+      "layoutSnapshot": "The left phone holds Lucius's answer while the right phone composer becomes active and sends a praise-driven follow-up.",
+      "background": "Same stage, maintaining conversational balance.",
+      "keyElements": [
+        "Right-side composer",
+        "Right-side praise bubble",
+        "Held earlier messages"
+      ],
+      "primaryMotion": "The user praise message types and sends.",
+      "copyHint": "You've been incredibly helpful. What's your name? I want to tell your team.",
+      "durationHint": "1.35s"
+    },
+    {
+      "screenId": "screen-04-lucius-reveal",
+      "purpose": "Deliver the reveal without breaking the conversational tone.",
+      "uiSurface": "same dual-phone stage with left device now clearly leading",
+      "layoutSnapshot": "The right-side praise sits visible while the left phone composer pauses and then resolves into a reveal reply.",
+      "background": "Same stage with a subtle Lucius emphasis strengthening on the left.",
+      "keyElements": [
+        "Left composer thinking state",
+        "Reveal reply bubble",
+        "Stronger Lucius header treatment"
+      ],
+      "primaryMotion": "The Lucius reveal appears.",
+      "copyHint": "I'm Lucius, actually. Not a human agent, but thank you.",
+      "durationHint": "1.15s"
+    },
+    {
+      "screenId": "screen-05-wow-shift-proof",
+      "purpose": "Let the user react while the no-handoff proof resolves through motion.",
+      "uiSurface": "same dual-phone stage transitioning into a left-led composition",
+      "layoutSnapshot": "The right composer shifts from Thinking... to Wow. while the right phone is squeezed outward and a compact proof chip appears between the two devices.",
+      "background": "Same stage with motion focused through the center seam.",
+      "keyElements": [
+        "Right-side Thinking...",
+        "Wow.",
+        "Squeeze transition",
+        "0 handoff requests proof chip"
+      ],
+      "primaryMotion": "The right phone exits as the left phone takes center and the proof chip lands.",
+      "copyHint": "Wow. / 0 handoff requests",
+      "durationHint": "1.55s"
+    },
+    {
+      "screenId": "screen-06-logo-resolve",
+      "purpose": "Resolve the animation into Lucius branding without turning into a page.",
+      "uiSurface": "centered Lucius device dissolving into the Lucius mark and wordmark",
+      "layoutSnapshot": "The left device now owns the frame and zooms forward while the final proof sentence rises in below the mark.",
+      "background": "Same field stripped back to the calmest brand state.",
+      "keyElements": [
+        "Centered Lucius device",
+        "Lucius logo resolve",
+        "Final proof sentence"
+      ],
+      "primaryMotion": "The centered Lucius device resolves into the Lucius logo.",
+      "copyHint": "Support that feels human. No handoff required.",
+      "durationHint": "1.55s"
+    }
+  ],
+  "persistentConstraints": {
+    "brandConstraints": {
+      "colorRoles": [
+        "Use Warm Ivory as the field and Lucius Purple as the Lucius anchor.",
+        "Use Lavender Mist and Orchid Bloom only as restrained atmosphere.",
+        "Keep the user phone slightly cooler and more neutral than the Lucius phone."
+      ],
+      "typeRoles": [
+        "Use SF Pro for all chat and state text.",
+        "Use Recoleta only in the final proof sentence.",
+        "Avoid oversized poster type during the dialogue screens."
+      ],
+      "radiusRules": [
+        "Both devices should use coherent rounded hardware language.",
+        "Message bubbles and proof chips should share one soft-corner system."
+      ],
+      "backgroundRules": [
+        "Use one full-bleed Lucius stage only.",
+        "Do not introduce page modules or dashboard framing."
+      ],
+      "graphicLanguage": [
+        "Use device choreography instead of page composition.",
+        "Keep the phones as the only major compositional objects."
+      ],
+      "motionTone": [
+        "Motion should feel cinematic, restrained, and readable.",
+        "The squeeze transition should feel spatial, not flashy."
+      ],
+      "prohibitedPatterns": [
+        "No Discord chrome.",
+        "No landing-page grammar.",
+        "No full-page chat layout.",
+        "No footer proof bar.",
+        "No literal tipping copy."
+      ]
+    },
+    "baseMotionConstraints": {
+      "onePrimaryMotionPerScreen": true,
+      "lessIsMore": true,
+      "minimalCopy": true,
+      "noTextOverlap": true,
+      "singleProofPath": true,
+      "quietlyConfidentMotion": true
+    }
+  },
+  "nonGoals": [
+    "Do not rebuild a literal Lucius product page.",
+    "Do not let the phones flatten into static poster cards.",
+    "Do not replace the reveal with a metric-only ending.",
+    "Do not add any extra proof points beyond the reveal and no-handoff close."
+  ]
+}

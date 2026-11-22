@@ -1,0 +1,29 @@
+{
+  "projectName": "lucius-client-app",
+  "mode": "file-router",
+  "typescript": true,
+  "tailwind": true,
+  "packageManager": "npm",
+  "git": true,
+  "install": true,
+  "addOnOptions": {
+    "prisma": {
+      "database": "postgres"
+    }
+  },
+  "version": 1,
+  "framework": "react-cra",
+  "chosenAddOns": [
+    "tanstack-query",
+    "shadcn",
+    "start",
+    "store",
+    "ai",
+    "db",
+    "prisma",
+    "sentry",
+    "form",
+    "table",
+    "paraglide"
+  ]
+}

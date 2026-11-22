@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feishu</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- config must load before app.js -->
+  <script src="config.js"></script>
+</head>
+<body>
+
+  <!-- ① Navigation Sidebar -->
+  <nav id="nav-sidebar"></nav>
+
+  <!-- ② Chat List -->
+  <aside id="chat-list-panel">
+    <div class="cl-header">
+      <div class="cl-title-row">
+        <span class="cl-title">Chats</span>
+        <div class="cl-icons">
+          <div class="cl-btn" title="Filter">
+            <svg viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          </div>
+          <div class="cl-btn" title="New chat">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="cl-search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+        <span>Search</span>
+        <span class="kbd">⌘K</span>
+      </div>
+    </div>
+    <div id="chat-list"></div>
+  </aside>
+
+  <!-- ③ Main Chat Window -->
+  <main id="chat-window">
+    <!-- header (rendered by JS) -->
+    <div id="cw-header" class="cw-header"></div>
+
+    <!-- tabs (rendered by JS) -->
+    <div id="cw-tabs" class="cw-tabs"></div>
+
+    <!-- messages + input -->
+    <div class="cw-body">
+      <div id="messages-area"></div>
+    </div>
+    <div id="input-area"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

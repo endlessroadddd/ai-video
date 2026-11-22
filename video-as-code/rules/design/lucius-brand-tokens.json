@@ -1,0 +1,177 @@
+{
+  "source": {
+    "document": "Lucius Brand Guideline.pdf",
+    "version": "1.1",
+    "path": "C:\\Users\\ASUS\\Downloads\\Lucius Brand Guideline.pdf"
+  },
+  "brandPersonality": [
+    "Intelligent",
+    "Collaborative",
+    "Quietly Confident"
+  ],
+  "logo": {
+    "symbolMeaning": [
+      "Abstract human silhouette",
+      "AI teammate presence",
+      "Approachability",
+      "Collaboration",
+      "Subtle echo of the @ symbol"
+    ],
+    "wordmark": {
+      "text": "Lucius",
+      "family": "Recoleta"
+    },
+    "clearSpace": {
+      "rule": "Minimum clear space on all sides equals the height of the logo mark."
+    },
+    "approvedVariants": [
+      {
+        "id": "white-on-lucius-purple",
+        "foreground": "#FFFFFF",
+        "background": "#5538C7",
+        "usage": [
+          "landing pages",
+          "hero sections",
+          "campaigns",
+          "high-visibility marketing surfaces"
+        ]
+      },
+      {
+        "id": "black-on-light-purple",
+        "foreground": "#000000",
+        "background": "#BAB2FF",
+        "usage": [
+          "lighter brand environments",
+          "editorial layouts",
+          "softer brand expression"
+        ]
+      },
+      {
+        "id": "white-on-violet",
+        "foreground": "#FFFFFF",
+        "background": "#B268D8",
+        "usage": [
+          "dynamic layouts",
+          "promotional assets",
+          "motion-driven experiences"
+        ]
+      },
+      {
+        "id": "white-on-deep-moss",
+        "foreground": "#FFFFFF",
+        "background": "#1B4038",
+        "usage": [
+          "feature highlights",
+          "product sections",
+          "supporting brand environments"
+        ]
+      }
+    ],
+    "forbiddenTreatments": [
+      "shadow behind the logo",
+      "outline or stroke added to the logo",
+      "stretched or distorted logo",
+      "low-resolution logo",
+      "altered wordmark typography",
+      "logo placed on low-contrast backgrounds"
+    ]
+  },
+  "color": {
+    "tokens": {
+      "luciusPurple": {
+        "hex": "#5538C7",
+        "rgb": [85, 56, 199],
+        "role": "primary brand anchor"
+      },
+      "lavenderMist": {
+        "hex": "#BAB2FF",
+        "rgb": [186, 178, 255],
+        "role": "light supporting brand surface"
+      },
+      "deepMoss": {
+        "hex": "#1B4038",
+        "rgb": [27, 64, 56],
+        "role": "dark supporting brand surface"
+      },
+      "orchidBloom": {
+        "hex": "#B268D8",
+        "rgb": [178, 104, 216],
+        "role": "expressive supporting brand accent"
+      },
+      "cobaltPulse": {
+        "hex": "#504DDC",
+        "rgb": [80, 77, 220],
+        "role": "supporting cool-tech accent"
+      },
+      "warmIvory": {
+        "hex": "#E1DAC0",
+        "rgb": [225, 218, 192],
+        "role": "warm neutral foundation"
+      }
+    },
+    "marketingPalette": [
+      "luciusPurple",
+      "warmIvory",
+      "orchidBloom",
+      "lavenderMist"
+    ],
+    "supportingPalette": [
+      "deepMoss",
+      "cobaltPulse"
+    ],
+    "functionalDefaults": {
+      "customerSupport": "luciusPurple",
+      "communityManagement": "orchidBloom",
+      "salesAndLeadQualification": "lavenderMist",
+      "internalOperations": "deepMoss"
+    }
+  },
+  "typography": {
+    "primary": {
+      "family": "SF Pro",
+      "weights": [
+        "Light",
+        "Regular",
+        "Medium",
+        "Semibold",
+        "Bold"
+      ],
+      "roles": [
+        "product interfaces",
+        "system-driven communication",
+        "functional content",
+        "high-legibility UI text"
+      ]
+    },
+    "secondary": {
+      "family": "Recoleta",
+      "weights": [
+        "Regular",
+        "Semibold",
+        "Bold"
+      ],
+      "roles": [
+        "headlines",
+        "brand moments",
+        "key messaging"
+      ]
+    },
+    "pairingPrinciple": "SF Pro provides structure, precision, and readability. Recoleta provides warmth, expression, and human contrast."
+  },
+  "visualLanguage": {
+    "forms": [
+      "simplified geometric forms",
+      "soft rounded edges"
+    ],
+    "icons": [
+      "clean shapes",
+      "consistent stroke weights",
+      "modular compositions"
+    ],
+    "graphics": [
+      "halftone treatment for photography",
+      "structured dot matrix",
+      "refined halftone grid for backgrounds"
+    ]
+  }
+}

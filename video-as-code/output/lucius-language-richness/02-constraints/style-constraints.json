@@ -1,0 +1,53 @@
+{
+  "assetDurationSeconds": 8.8,
+  "aspectRatio": "16:9",
+  "silentFirst": true,
+  "fullBleedStage": true,
+  "takeawayChain": [
+    "Lucius answers with human-feeling language.",
+    "The user mistakes Lucius for a human teammate.",
+    "The exchange ends without a human handoff."
+  ],
+  "proofRequirements": [
+    "Lucius answering the product question naturally",
+    "A reveal that Lucius is not a human agent",
+    "A compact proof chip resolving to 0 handoff requests"
+  ],
+  "layoutRules": {
+    "stageModel": "dual-half-screen-phones",
+    "majorObjects": [
+      "left Lucius phone",
+      "right user phone"
+    ],
+    "forbidden": [
+      "landing-page grammar",
+      "dashboard chrome",
+      "service strip",
+      "footer proof bar",
+      "full-screen chat page"
+    ]
+  },
+  "motionRules": {
+    "onePrimaryMotionPerScreen": true,
+    "screens": [
+      "right-phone input and send",
+      "left-phone thinking and answer generation",
+      "right-phone praise message send",
+      "left-phone reveal",
+      "right-phone wow plus squeeze transition and proof chip",
+      "centered Lucius logo resolve"
+    ]
+  },
+  "typeRules": {
+    "ui": "SF Pro or system fallback",
+    "display": "Recoleta for final resolve only"
+  },
+  "colorRules": {
+    "field": "Warm Ivory",
+    "primary": "Lucius Purple",
+    "supporting": [
+      "Lavender Mist",
+      "Orchid Bloom"
+    ]
+  }
+}

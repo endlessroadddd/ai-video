@@ -1,0 +1,64 @@
+{
+  "persistentConstraints": {
+    "brandConstraints": {
+      "colorRoles": [
+        "Use Warm Ivory as the field and Lucius Purple as the Lucius anchor.",
+        "Use Lavender Mist and Orchid Bloom only as restrained atmosphere.",
+        "Keep the user phone slightly cooler and more neutral than the Lucius phone."
+      ],
+      "typeRoles": [
+        "Use SF Pro for device UI, messages, and proof chips.",
+        "Use Recoleta only in the final proof sentence."
+      ],
+      "radiusRules": [
+        "Both devices should use coherent rounded hardware language.",
+        "Message bubbles and proof chips should share one soft-corner system."
+      ],
+      "backgroundRules": [
+        "Use one full-bleed Lucius stage only.",
+        "Do not introduce page modules or dashboard framing."
+      ],
+      "graphicLanguage": [
+        "Use device choreography instead of page composition.",
+        "Keep the phones as the only major compositional objects."
+      ],
+      "motionTone": [
+        "Motion should feel cinematic, restrained, and readable.",
+        "The squeeze transition should feel spatial, not flashy."
+      ],
+      "prohibitedPatterns": [
+        "No Discord chrome.",
+        "No landing-page grammar.",
+        "No full-page chat layout.",
+        "No footer proof bar."
+      ]
+    },
+    "baseMotionConstraints": {
+      "onePrimaryMotionPerScreen": true,
+      "lessIsMore": true,
+      "minimalCopy": true,
+      "noTextOverlap": true,
+      "singleProofPath": true,
+      "quietlyConfidentMotion": true
+    }
+  },
+  "alreadyInRepo": [
+    "Lucius brand logo and wordmark assets in assets/brand",
+    "Repo-level Lucius product context in assets/references",
+    "Recoleta-RegularDEMO.otf in short-asset-ai-heavy-catch-you/public/fonts",
+    "Minimal React/Vite short-asset project patterns elsewhere in projects"
+  ],
+  "requiredFromUser": [],
+  "optionalEnhancements": [
+    "Additional glass or lens-reflection polish if a later art-direction pass needs it",
+    "A stricter device-notch silhouette if review asks for more hardware realism"
+  ],
+  "uiReferences": [
+    "Lucius color and type behavior from the repo design references",
+    "Browser-first short-asset patterns from the existing short asset projects"
+  ],
+  "copyDependencies": [
+    "Final sign-off on the reveal and closing sentence if wording needs a brand-voice pass"
+  ],
+  "blockers": []
+}

@@ -1,0 +1,104 @@
+:root {
+  /* Brand */
+  --font-sans: "SF Pro Display", "SF Pro Text", "PingFang SC", "Helvetica Neue", system-ui, sans-serif;
+  --font-serif: "Recoleta", Georgia, serif;
+  --lucius-purple: #5538c7;
+  --lucius-ivory: #e1dac0;
+  --lucius-lavender: #bab2ff;
+  --lucius-orchid: #b268d8;
+  --lucius-moss: #1b4038;
+  --lucius-cobalt: #504ddc;
+  --lucius-ink: #1f2230;
+
+  /* Surfaces */
+  --dashboard-app-bg: #f4efe3;
+  --dashboard-page-bg: #ebe4d4;
+  --dashboard-panel-bg: #fffdf8;
+  --dashboard-panel-muted-bg: #f5efe1;
+  --dashboard-panel-border: #d8cfbf;
+  --dashboard-text: #2c3040;
+  --dashboard-title-text: var(--lucius-ink);
+  --dashboard-text-muted: #6e6a67;
+  --dashboard-soft-surface: #f7f1e6;
+  --dashboard-soft-surface-strong: #efe7d7;
+  --dashboard-interactive-hover-bg: #ede6fb;
+  --dashboard-row-hover-bg: var(--dashboard-interactive-hover-bg);
+
+  /* Sidebar and action color */
+  --dashboard-sidebar-bg: #ede6d8;
+  --dashboard-sidebar-text: #4c4b69;
+  --dashboard-sidebar-title: #1e293b;
+  --dashboard-sidebar-muted: #6b7280;
+  --dashboard-sidebar-active-bg: #5538c7;
+  --dashboard-sidebar-active-fg: #ffffff;
+  --dashboard-sidebar-company-active-bg: #ece4fb;
+  --dashboard-action-primary-bg: var(--dashboard-sidebar-active-bg);
+  --dashboard-action-primary-hover-bg: #4729b3;
+  --dashboard-action-primary-fg: #ffffff;
+  --dashboard-action-tinted-bg: var(--dashboard-sidebar-company-active-bg);
+  --dashboard-action-tinted-hover-bg: #e6def9;
+  --dashboard-action-tinted-border: #d6caef;
+  --dashboard-action-tinted-fg: var(--dashboard-sidebar-active-bg);
+  --dashboard-action-secondary-bg: #ede5d5;
+  --dashboard-action-secondary-hover-bg: #e5ddf4;
+  --dashboard-action-secondary-text: #5d5a68;
+
+  /* Chat surfaces */
+  --dashboard-chat-font: var(--font-sans);
+  --dashboard-chat-canvas-bg: #faf5ea;
+  --dashboard-chat-sidebar-bg: #fcf8ef;
+  --dashboard-chat-sidebar-border: #ddd4c6;
+  --dashboard-chat-sidebar-divider: #e6ddcf;
+  --dashboard-chat-session-text: #4c4b69;
+  --dashboard-chat-session-muted: #8d8aa0;
+  --dashboard-chat-session-hover-bg: var(--dashboard-interactive-hover-bg);
+  --dashboard-chat-session-active-bg: #ece4fb;
+  --dashboard-chat-search-input-border: #d8cfbf;
+  --dashboard-chat-search-shadow: 0 16px 34px rgb(34 28 52 / 12%);
+  --dashboard-chat-shell-shadow: 0 14px 28px rgb(34 28 52 / 10%);
+  --dashboard-chat-composer-border: #ddd3c4;
+  --dashboard-chat-user-bubble-bg: #f2e9da;
+  --dashboard-chat-user-bubble-text: #312d3c;
+  --dashboard-chat-assistant-text: #312d3c;
+  --dashboard-chat-message-meta-text: #8f8797;
+  --dashboard-chat-message-self-bg: #f3eadc;
+  --dashboard-chat-message-participant-bg: #f0efe8;
+  --dashboard-chat-message-avatar-size: 32px;
+  --dashboard-chat-message-radius: 8px;
+  --dashboard-chat-message-action-icon: #847c8f;
+  --dashboard-chat-message-action-hover-bg: var(--dashboard-row-hover-bg);
+  --dashboard-chat-message-action-active-bg: #ece4fb;
+  --dashboard-chat-message-group-gap: 24px;
+  --dashboard-chat-message-stack-gap: 12px;
+  --dashboard-chat-lavender-bg: rgb(186 178 255 / 22%);
+  --dashboard-chat-lavender-border: rgb(85 56 199 / 20%);
+  --dashboard-chat-sage-bg: rgb(27 64 56 / 8%);
+  --dashboard-chat-sage-border: rgb(27 64 56 / 14%);
+  --dashboard-chat-reply-toast-bg: #5538c7;
+  --dashboard-chat-reply-toast-text: #ffffff;
+  --dashboard-chat-reply-toast-action-bg: rgb(255 255 255 / 22%);
+  --dashboard-chat-reply-toast-action-hover-bg: rgb(255 255 255 / 30%);
+  --dashboard-chat-reply-toast-focus-ring: rgb(255 255 255 / 72%);
+  --dashboard-chat-reply-toast-shadow: 0 1px 4px rgb(41 40 48 / 10%);
+
+  /* Chat sizing */
+  --dashboard-chat-content-max-width: 760px;
+  --dashboard-chat-stage-title-max-width: clamp(16rem, 38vw, 34rem);
+  --dashboard-chat-assistant-max-width: 700px;
+  --dashboard-chat-message-self-max-width: 447px;
+  --dashboard-chat-message-participant-max-width: 447px;
+
+  /* Skeleton and layout */
+  --dashboard-skeleton-base: #e9e2f8;
+  --dashboard-skeleton-soft: #f4effd;
+  --dashboard-skeleton-strong: #ddd2f5;
+  --dashboard-skeleton-accent: #d4c5f5;
+  --dashboard-skeleton-divider: #e5ddf5;
+  --dashboard-skeleton-surface: #faf7ff;
+  --dashboard-skeleton-highlight: rgb(255 255 255 / 62%);
+  --dashboard-sidebar-width: 256px;
+  --button-height-default: 44px;
+  --button-height-sm: 40px;
+  --button-height-lg: 48px;
+  --button-size-icon: 36px;
+}

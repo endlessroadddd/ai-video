@@ -1,0 +1,31 @@
+{
+  "caseSlug": "traditional-ai-empty-comfort",
+  "assetSlug": "payment-still-stuck",
+  "mode": "review-data-only",
+  "keyframeResults": [
+    {
+      "beatId": "beat-01-problem",
+      "status": "prepared",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\traditional-ai-empty-comfort\\short-assets\\payment-still-stuck\\03-animatic\\keyframes\\beat-01-problem.preview.json"
+    },
+    {
+      "beatId": "beat-02-empty-comfort",
+      "status": "prepared",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\traditional-ai-empty-comfort\\short-assets\\payment-still-stuck\\03-animatic\\keyframes\\beat-02-empty-comfort.preview.json"
+    },
+    {
+      "beatId": "beat-03-fake-resolution",
+      "status": "prepared",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\traditional-ai-empty-comfort\\short-assets\\payment-still-stuck\\03-animatic\\keyframes\\beat-03-fake-resolution.preview.json"
+    },
+    {
+      "beatId": "beat-04-proof",
+      "status": "prepared",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\traditional-ai-empty-comfort\\short-assets\\payment-still-stuck\\03-animatic\\keyframes\\beat-04-proof.preview.json"
+    }
+  ],
+  "sequenceResult": {
+    "status": "prepared",
+    "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\traditional-ai-empty-comfort\\short-assets\\payment-still-stuck\\03-animatic\\animatic\\payment-still-stuck-rough-sequence.preview.json"
+  }
+}

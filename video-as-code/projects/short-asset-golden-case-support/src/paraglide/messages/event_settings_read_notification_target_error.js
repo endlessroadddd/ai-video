@@ -1,0 +1,29 @@
+/* eslint-disable */
+import { getLocale, experimentalStaticLocale } from '../runtime.js';
+
+/** @typedef {import('../runtime.js').LocalizedString} LocalizedString */
+
+/** @typedef {{}} Event_Settings_Read_Notification_Target_ErrorInputs */
+
+const en_event_settings_read_notification_target_error = /** @type {(inputs: Event_Settings_Read_Notification_Target_ErrorInputs) => LocalizedString} */ () => {
+	return /** @type {LocalizedString} */ (`Failed to read event_notification_target.`)
+};
+
+const zh_event_settings_read_notification_target_error = /** @type {(inputs: Event_Settings_Read_Notification_Target_ErrorInputs) => LocalizedString} */ () => {
+	return /** @type {LocalizedString} */ (`读取 event_notification_target 失败。`)
+};
+
+/**
+* | output |
+* | --- |
+* | "Failed to read event_notification_target." |
+*
+* @param {Event_Settings_Read_Notification_Target_ErrorInputs} inputs
+* @param {{ locale?: "en" | "zh" }} options
+* @returns {LocalizedString}
+*/
+export const event_settings_read_notification_target_error = /** @type {((inputs?: Event_Settings_Read_Notification_Target_ErrorInputs, options?: { locale?: "en" | "zh" }) => LocalizedString) & import('../runtime.js').MessageMetadata<Event_Settings_Read_Notification_Target_ErrorInputs, { locale?: "en" | "zh" }, {}>} */ ((inputs = {}, options = {}) => {
+	const locale = experimentalStaticLocale ?? options.locale ?? getLocale()
+	if (locale === "en") return en_event_settings_read_notification_target_error(inputs)
+	return zh_event_settings_read_notification_target_error(inputs)
+});

@@ -1,0 +1,1 @@
+          <circle key={`${cx}-${cy}`} cx={cx} cy={cy} r="0.42" fill="#fff" stroke={color} strokeWidth="0.16" />

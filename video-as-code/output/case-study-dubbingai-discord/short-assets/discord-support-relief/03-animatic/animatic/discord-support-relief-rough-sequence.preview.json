@@ -1,0 +1,48 @@
+{
+  "assetSlug": "discord-support-relief",
+  "type": "rough-sequence-review",
+  "durationTarget": 8,
+  "aspectRatio": "16:9",
+  "soundMode": "silent-first",
+  "brandRole": "closing-tag",
+  "sequenceGoal": "Show support overload, then show Lucius taking the repetitive layer, then land on the operating-model proof.",
+  "proofShot": "A live Discord support stream keeps moving under Lucius while the operating model shifts from 3 human mods to 0.",
+  "beats": [
+    {
+      "order": 1,
+      "beatId": "beat-01-hook",
+      "purpose": "Establish support overload immediately.",
+      "copyLine": "Support never stops.",
+      "durationHint": "1.8s",
+      "proofBinding": [
+        "30K members"
+      ]
+    },
+    {
+      "order": 2,
+      "beatId": "beat-02-takeover",
+      "purpose": "Show Lucius taking over the repetitive support layer.",
+      "copyLine": "Lucius handles the repetitive layer.",
+      "durationHint": "3.0s",
+      "proofBinding": [
+        "80% automation in 15 days"
+      ]
+    },
+    {
+      "order": 3,
+      "beatId": "beat-03-proof",
+      "purpose": "Land the operating-model proof and emotional payoff.",
+      "copyLine": "From 3 human mods to 0.",
+      "durationHint": "3.2s",
+      "proofBinding": [
+        "3 -> 0 human mods",
+        "Lucius basically gave me my holidays back."
+      ]
+    }
+  ],
+  "reviewQuestions": [
+    "Does the hook land in the first second?",
+    "Does the sequence only serve one takeaway?",
+    "Is the proof shot clear before the asset ends?"
+  ]
+}

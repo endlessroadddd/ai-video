@@ -1,0 +1,597 @@
+.knowledge-scene {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  padding: 18px;
+}
+
+.discord-app-shell--knowledge .discord-server-rail {
+  border-right-color: var(--discord-border-strong);
+}
+
+.knowledge-shell {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  flex: 1 1 auto;
+  grid-template-columns: clamp(220px, 22vw, 270px) minmax(0, 1fr);
+  background: var(--discord-sidebar-bg);
+}
+
+.knowledge-sidebar {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  gap: 24px;
+  padding: 22px 18px;
+  border-right: 1px solid var(--discord-border);
+  background:
+    linear-gradient(180deg, rgb(35 37 43 / 98%), rgb(30 32 37 / 100%)),
+    radial-gradient(circle at top left, rgb(88 101 242 / 12%), transparent 26%);
+}
+
+.knowledge-brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.knowledge-brand__mark {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgb(88 101 242 / 90%), rgb(71 82 196 / 90%));
+  box-shadow: 0 14px 28px rgb(88 101 242 / 22%);
+}
+
+.knowledge-brand__mark img {
+  width: 22px;
+  height: 22px;
+}
+
+.knowledge-brand__copy {
+  display: grid;
+  gap: 2px;
+}
+
+.knowledge-brand__copy strong {
+  font-size: 16px;
+  color: var(--discord-text-strong);
+}
+
+.knowledge-brand__copy span {
+  font-size: 13px;
+  color: var(--discord-text-muted);
+}
+
+.knowledge-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.knowledge-nav__item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--discord-text-soft);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.knowledge-nav__item:hover {
+  transform: translateX(1px);
+  background: rgb(255 255 255 / 4%);
+  color: var(--discord-text-strong);
+}
+
+.knowledge-nav__item.is-active {
+  background: var(--discord-accent-soft);
+  color: var(--discord-text-strong);
+  box-shadow: inset 0 0 0 1px rgb(88 101 242 / 18%);
+}
+
+.knowledge-sidebar__footer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  margin-top: auto;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgb(255 255 255 / 4%);
+}
+
+.knowledge-sidebar__footer-dot {
+  width: 10px;
+  height: 10px;
+  margin-top: 4px;
+  border-radius: 999px;
+  background: var(--discord-success);
+  box-shadow: 0 0 0 4px rgb(59 165 93 / 16%);
+}
+
+.knowledge-sidebar__footer strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: var(--discord-text-strong);
+}
+
+.knowledge-sidebar__footer span {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--discord-text-muted);
+}
+
+.knowledge-main {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top right, rgb(88 101 242 / 10%), transparent 24%),
+    linear-gradient(180deg, rgb(49 51 56 / 98%), rgb(43 45 49 / 100%));
+}
+
+.knowledge-header {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.knowledge-header__copy {
+  display: grid;
+  gap: 10px;
+  max-width: 58ch;
+}
+
+.knowledge-header__copy h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 38px);
+  letter-spacing: -0.05em;
+  color: var(--discord-text-strong);
+}
+
+.knowledge-header__copy p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--discord-text-soft);
+  line-height: 1.6;
+}
+
+.knowledge-header__eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--discord-accent);
+}
+
+.knowledge-header__tools {
+  display: grid;
+  justify-items: end;
+  gap: 12px;
+}
+
+.knowledge-header__chip {
+  padding: 8px 12px;
+  border: 1px solid rgb(88 101 242 / 22%);
+  border-radius: 999px;
+  background: var(--discord-accent-soft);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.knowledge-header__search {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 240px;
+  padding: 12px 14px;
+  border: 1px solid var(--discord-border-strong);
+  border-radius: 14px;
+  background: rgb(56 58 64 / 92%);
+  color: var(--discord-text-muted);
+  font-size: 15px;
+}
+
+.knowledge-body {
+  display: grid;
+  min-height: 0;
+  grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
+  gap: 18px;
+}
+
+.knowledge-list {
+  display: flex;
+  min-height: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.knowledge-list__card {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid var(--discord-border);
+  border-radius: 20px;
+  background: rgb(56 58 64 / 90%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
+}
+
+.knowledge-list__card.is-selected {
+  border-color: rgb(88 101 242 / 24%);
+  background: linear-gradient(180deg, rgb(88 101 242 / 18%), rgb(56 58 64 / 94%));
+  box-shadow: 0 18px 32px rgb(0 0 0 / 18%);
+}
+
+.knowledge-list__title-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.knowledge-list__title-row h2 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--discord-text-strong);
+}
+
+.knowledge-list__status {
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: rgb(59 165 93 / 14%);
+  color: #9ce0b0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.knowledge-list__card p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--discord-text-soft);
+  line-height: 1.55;
+}
+
+.knowledge-list__meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--discord-text-muted);
+}
+
+.knowledge-detail {
+  display: grid;
+  min-height: 0;
+  align-content: start;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--discord-border-strong);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgb(56 58 64 / 94%), rgb(49 51 56 / 96%)),
+    linear-gradient(135deg, rgb(88 101 242 / 10%), transparent 42%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 3%);
+}
+
+.knowledge-detail__top-note {
+  justify-self: start;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: var(--discord-accent-soft);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.knowledge-detail__header {
+  display: grid;
+  gap: 8px;
+}
+
+.knowledge-detail__header h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.8vw, 32px);
+  letter-spacing: -0.05em;
+  color: var(--discord-text-strong);
+}
+
+.knowledge-detail__header p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--discord-text-soft);
+  line-height: 1.65;
+}
+
+.knowledge-detail__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.knowledge-detail__meta-card {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid var(--discord-border);
+  border-radius: 16px;
+  background: rgb(49 51 56 / 92%);
+}
+
+.knowledge-detail__meta-card.is-focused,
+.source-sync-badge.is-focused,
+.policy-diff.is-focused,
+.knowledge-edit-lab__grid.is-focused,
+.knowledge-test-panel.is-focused {
+  box-shadow: var(--discord-glow);
+}
+
+.knowledge-detail__meta-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--discord-text-muted);
+}
+
+.knowledge-detail__meta-card strong {
+  font-size: 15px;
+  color: var(--discord-text-strong);
+}
+
+.source-sync-badge {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  width: fit-content;
+  padding: 8px 10px;
+  border: 1px solid rgb(88 101 242 / 18%);
+  border-radius: 999px;
+  background: var(--discord-accent-soft);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.source-sync-badge__sparkle {
+  color: #ffd166;
+}
+
+.policy-diff {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid var(--discord-border);
+  border-radius: 20px;
+  background: rgb(49 51 56 / 92%);
+}
+
+.policy-diff__eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--discord-text-muted);
+}
+
+.policy-diff__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.policy-diff__arrow {
+  color: var(--discord-text-muted);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.policy-diff__card {
+  display: grid;
+  gap: 10px;
+  min-height: 132px;
+  padding: 14px;
+  border: 1px solid var(--discord-border);
+  border-radius: 16px;
+  background: rgb(56 58 64 / 92%);
+}
+
+.policy-diff__card--before {
+  background: linear-gradient(180deg, rgb(237 66 69 / 12%), rgb(56 58 64 / 92%));
+}
+
+.policy-diff__card--after {
+  background: linear-gradient(180deg, rgb(59 165 93 / 12%), rgb(56 58 64 / 92%));
+}
+
+.policy-diff__tag {
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 7%);
+  color: var(--discord-text-soft);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.policy-diff__card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--discord-text);
+}
+
+.knowledge-callouts {
+  display: grid;
+  gap: 10px;
+}
+
+.knowledge-callout {
+  padding: 12px 14px;
+  border: 1px solid var(--discord-border);
+  border-radius: 16px;
+  background: rgb(255 255 255 / 4%);
+  color: var(--discord-text-soft);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.knowledge-edit-lab {
+  display: grid;
+  gap: 14px;
+}
+
+.knowledge-edit-lab__grid {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--discord-border);
+  border-radius: 18px;
+  background: rgb(49 51 56 / 92%);
+}
+
+.knowledge-edit-chip {
+  display: grid;
+  gap: 5px;
+  padding: 12px 14px;
+  border: 1px solid var(--discord-border);
+  border-radius: 14px;
+  background: rgb(56 58 64 / 92%);
+}
+
+.knowledge-edit-chip strong {
+  font-size: 14px;
+  color: var(--discord-text-strong);
+}
+
+.knowledge-edit-chip span {
+  font-size: 13px;
+  color: var(--discord-text-muted);
+}
+
+.knowledge-test-panel {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgb(237 66 69 / 24%);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgb(237 66 69 / 12%), rgb(49 51 56 / 92%));
+}
+
+.knowledge-test-panel__header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.knowledge-test-panel__eyebrow,
+.knowledge-test-panel__status {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.knowledge-test-panel__eyebrow {
+  color: var(--discord-text-muted);
+}
+
+.knowledge-test-panel__status {
+  color: #ffb7b8;
+}
+
+.knowledge-test-panel__query,
+.knowledge-test-panel__result {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.knowledge-test-panel__query {
+  font-size: 14px;
+  color: var(--discord-text-soft);
+}
+
+.knowledge-test-panel__result {
+  font-size: 15px;
+  color: #ffc0c1;
+}
+
+@media (max-width: 1100px) {
+  .knowledge-scene {
+    padding: 12px;
+  }
+
+  .knowledge-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .knowledge-sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--discord-border);
+  }
+
+  .knowledge-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .knowledge-main {
+    padding: 18px 16px;
+  }
+
+  .knowledge-header {
+    flex-direction: column;
+  }
+
+  .knowledge-header__tools {
+    justify-items: stretch;
+    width: 100%;
+  }
+
+  .knowledge-header__search {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .knowledge-detail__meta,
+  .policy-diff__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .policy-diff__arrow {
+    justify-self: center;
+  }
+}

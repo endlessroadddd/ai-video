@@ -1,0 +1,47 @@
+{
+  "name": "discord-ui-kit",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "files": [
+    "dist-lib",
+    "README.md"
+  ],
+  "main": "./dist-lib/index.js",
+  "module": "./dist-lib/index.js",
+  "types": "./dist-lib/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist-lib/index.d.ts",
+      "import": "./dist-lib/index.js"
+    },
+    "./styles.css": "./dist-lib/styles.css"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3031",
+    "build": "tsc -b && vite build",
+    "build:lib": "vite build --mode lib && tsc -p tsconfig.lib.json",
+    "preview": "vite preview --host 0.0.0.0 --port 3031"
+  },
+  "peerDependencies": {
+    "@skyra/discord-components-core": "^4.0.2",
+    "@skyra/discord-components-react": "^4.0.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@skyra/discord-components-core": "^4.0.2",
+    "@skyra/discord-components-react": "^4.0.2",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "typescript": "^5.7.2",
+    "vite": "^7.1.7"
+  }
+}

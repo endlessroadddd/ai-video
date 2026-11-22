@@ -1,0 +1,32 @@
+{
+  "why": [
+    "Large Discord communities break small teams when support volume scales faster than people can respond.",
+    "The visible problem is repeated questions, delayed answers, escalation burden, and humans staying on-call all the time."
+  ],
+  "how": [
+    "Lucius learns from historical Discord conversations, repeated questions, and prior human resolution patterns.",
+    "Lucius keeps improving through live interactions and escalation feedback instead of freezing after setup."
+  ],
+  "what": [
+    "Lucius becomes an autonomous Discord support teammate that handles most repetitive support work.",
+    "Lucius keeps coverage running and escalates edge cases when needed."
+  ],
+  "highlights": [
+    "30K members",
+    "80% automation in 15 days",
+    "3 -> 0 human mods",
+    "24/7 coverage",
+    "Lucius basically gave me my holidays back."
+  ],
+  "audience": [
+    "Founders",
+    "Product teams",
+    "Community operators",
+    "Buyers who understand Discord as a support surface"
+  ],
+  "nonGoals": [
+    "Do not invent internal queue counts or response-time metrics.",
+    "Do not turn the ending into a CTA.",
+    "Do not make the story about abstract AI magic."
+  ]
+}

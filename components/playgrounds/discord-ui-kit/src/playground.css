@@ -1,0 +1,33 @@
+.mode-tabs {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.mode-tab {
+  min-width: 104px;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.mode-tab:hover {
+  color: var(--ink-strong);
+}
+
+.mode-tab--active {
+  background: linear-gradient(135deg, rgba(114, 137, 255, 0.92), rgba(77, 226, 185, 0.72));
+  color: #f7fbff;
+  transform: translateY(-1px);
+}

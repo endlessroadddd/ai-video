@@ -1,0 +1,14 @@
+{
+  "name": "lucius-video-as-code",
+  "private": true,
+  "scripts": {
+    "dev:demo": "corepack pnpm --filter @lucius-vac/demo-app dev:demo",
+    "dev:material-library": "corepack pnpm --filter @lucius-vac/material-library dev",
+    "build:material-library": "corepack pnpm --filter @lucius-vac/material-library build",
+    "pipeline:index-libraries": "corepack pnpm --filter @lucius-vac/pipeline-tools index:libraries",
+    "pipeline:preview": "corepack pnpm --filter @lucius-vac/pipeline-tools preview:storyboard",
+    "pipeline:preview:animatic": "corepack pnpm --filter @lucius-vac/pipeline-tools preview:animatic",
+    "pipeline:assert:script-asset-stage": "corepack pnpm --filter @lucius-vac/pipeline-tools assert:script-asset-stage"
+  },
+  "packageManager": "pnpm@10.26.0"
+}

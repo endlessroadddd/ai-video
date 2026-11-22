@@ -1,0 +1,40 @@
+{
+  "caseSlug": "case-study-dubbingai-discord",
+  "assetSlug": "discord-support-relief",
+  "beatId": "beat-03-proof",
+  "type": "beat-keyframe-review",
+  "singleTakeaway": "Lucius takes repetitive Discord support off the human team.",
+  "purpose": "Land the operating-model proof and emotional payoff.",
+  "copyLine": "From 3 human mods to 0.",
+  "durationHint": "3.2s",
+  "visualState": [
+    "Moderator count resolves from 3 to 0.",
+    "A testimonial card lands with the holiday-relief quote."
+  ],
+  "motionCue": [
+    "Count compresses into a single operating-model badge.",
+    "Quote card settles in as the final proof moment."
+  ],
+  "proofBinding": [
+    "3 -> 0 human mods",
+    "Lucius basically gave me my holidays back."
+  ],
+  "matchType": "fresh-design",
+  "assetBindingIds": [],
+  "templateBindingIds": [],
+  "fallbackImplementation": [
+    "Build a clean proof card layout that keeps the quote readable at short-form speed."
+  ],
+  "hardConstraints": [
+    "Follow the Lucius color system: #5538C7, #BAB2FF, #B268D8, #1B4038, #E1DAC0.",
+    "Use SF Pro or a close system fallback for labels, UI text, metrics, and explanatory copy.",
+    "Use Recoleta or a close editorial serif fallback only for key headlines, brand moments, and the final principle scene.",
+    "No flicker, blank flash frames, or abrupt pop-in unless storyboarded.",
+    "No exaggerated AI magic beams, sweeps, or glow effects."
+  ],
+  "reviewQuestions": [
+    "Is the beat understandable at first glance?",
+    "Does the copy fit the duration hint?",
+    "Is the proof binding visible enough?"
+  ]
+}

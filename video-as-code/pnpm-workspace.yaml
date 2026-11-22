@@ -1,0 +1,8 @@
+packages:
+  - material-library
+  - projects/*
+
+ignoredBuiltDependencies:
+  - '@sentry/cli'
+  - esbuild
+  - protobufjs

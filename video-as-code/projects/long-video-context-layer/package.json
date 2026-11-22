@@ -1,0 +1,27 @@
+{
+  "name": "long-video-context-layer",
+  "version": "1.0.0",
+  "description": "Lucius context layer segment for long-form talking-head video",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.454",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.454"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.454",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "typescript": "5.7.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "start": "remotion studio",
+    "build": "remotion render",
+    "render": "remotion render ContextLayer ../渲染输出/context-layer.mp4"
+  }
+}

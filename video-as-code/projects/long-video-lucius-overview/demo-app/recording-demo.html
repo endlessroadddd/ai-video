@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucius Client Chat Recording Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lucius-purple: #5538c7;
+            --background: #faf5ea;
+            --foreground: #2c3040;
+            --dashboard-sidebar-bg: #ede6d8;
+            --dashboard-panel-border: #d8cfbf;
+            --dashboard-chat-user-bubble-bg: #f2e9da;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--foreground);
+            font-family: -apple-system, system-ui, sans-serif;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* 轨道动画 */
+        @keyframes orbit {
+            from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+            to   { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+        }
+
+        .orbit-item {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -20px;
+            animation: orbit 12s linear infinite;
+        }
+
+        .orbit-item:nth-child(1) { animation-delay: 0s; }
+        .orbit-item:nth-child(2) { animation-delay: -3s; }
+        .orbit-item:nth-child(3) { animation-delay: -6s; }
+        .orbit-item:nth-child(4) { animation-delay: -9s; }
+
+        /* 核心节点律动 */
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+
+        .node-pulse {
+            animation: pulse-soft 3s ease-in-out infinite;
+        }
+
+        /* 打字光标 */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.2em;
+            background: var(--lucius-purple);
+            animation: blink 1s step-end infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* 消息弹出动画 */
+        @keyframes message-pop {
+            from { transform: scale(0.8) translateY(20px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        .message-anim {
+            animation: message-pop 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        
+        .connection-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw-line 1.5s ease-out forwards;
+        }
+
+        @keyframes draw-line {
+            to { stroke-dashoffset: 0; }
+        }
+
+        .glass-overlay {
+            background: rgba(250, 245, 234, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="flex">
+    <!-- 侧边栏模拟 -->
+    <div class="w-64 bg-[#ede6d8] border-r border-[#d8cfbf] hidden md:flex flex-col p-4 space-y-6">
+        <div class="flex items-center space-x-2 px-2">
+            <div class="w-8 h-8 rounded bg-[#5538C7] flex items-center justify-center text-white font-bold">L</div>
+            <span class="font-bold">Lucius</span>
+        </div>
+        <nav class="space-y-1">
+            <div class="px-3 py-2 text-xs font-bold text-slate-400">MAIN</div>
+            <div class="flex items-center space-x-3 px-3 py-2 rounded-lg bg-[#ece4fb] text-[#5538C7] cursor-pointer">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span class="font-bold">Chat</span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- 主界面 -->
+    <div class="flex-1 flex flex-col relative">
+        <header class="h-14 border-b border-[#ddd4c6] flex items-center px-6 bg-white/50 backdrop-blur-sm sticky top-0 z-10">
+            <div class="flex items-center space-x-2">
+                <span class="font-semibold text-slate-700">Weekly Report</span>
+                <span class="text-[10px] bg-slate-200 px-1.5 py-0.5 rounded text-slate-500 uppercase font-bold">DRAFT</span>
+            </div>
+        </header>
+
+        <!-- 消息列表 -->
+        <main id="chat-messages" class="flex-1 overflow-y-auto p-6 flex flex-col space-y-6">
+            <!-- 动态注入 -->
+        </main>
+
+        <!-- 输入框模拟 -->
+        <footer class="p-6">
+            <div class="max-w-3xl mx-auto">
+                <div class="relative bg-white rounded-2xl border border-[#ddd3c4] shadow-xl p-5">
+                    <div id="composer-text" class="min-h-[28px] text-lg text-slate-800 outline-none pr-10 leading-relaxed font-medium"></div>
+                    <div id="typing-cursor" class="cursor absolute top-[22px] left-[20px]"></div>
+                    <div class="flex justify-between items-center mt-6">
+                        <div class="flex space-x-3 text-slate-300">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                        </div>
+                        <button id="send-btn" class="w-10 h-10 rounded-xl bg-[#5538C7] text-white flex items-center justify-center opacity-30 transition-all">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 核心分析层 (初始隐藏) -->
+        <div id="recording-overlay" class="absolute inset-0 glass-overlay flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-1000">
+            <div class="relative w-full h-full flex flex-col items-center justify-center overflow-hidden">
+                <svg id="connections-svg" class="absolute inset-0 w-full h-full pointer-events-none"></svg>
+
+                <div class="relative w-[400px] h-[400px] flex items-center justify-center scale-110">
+                    <!-- Lucius 节点 -->
+                    <div class="w-28 h-28 rounded-full bg-white shadow-2xl flex items-center justify-center border-[5px] border-[#5538C7] z-10 node-pulse">
+                        <svg width="64" height="64" viewBox="0 0 160 160" fill="#2A2A2A"><path d="M97.2954 83.3126V61.8688C97.2954 59.4552 97.4058 57.9768 97.371 55.7774C97.3402 53.8225 97.172 52.324 96.8124 51.2329C96.4843 50.2376 96.0973 49.8614 95.7065 49.6517C95.2159 49.3885 94.0163 49.0216 91.4092 49.4306C81.85 50.9305 75.9084 51.4225 66.1033 53.7535C64.1853 54.2094 63.0044 54.9422 62.2193 55.7164C61.4188 56.5058 60.8202 57.5469 60.3909 58.9165C59.4634 61.8754 59.5338 65.4899 59.5338 69.6661V92.4663L68.0945 90.9672L68.2421 90.9433C71.3396 90.4904 74.1407 92.8928 74.1407 96.0464V107.557C74.1407 108.141 74.214 108.496 74.2742 108.687C74.3038 108.781 74.3309 108.838 74.3471 108.868Z"/></svg>
+                    </div>
+                    <div id="orbit-logos" class="absolute inset-0"></div>
+                </div>
+
+                <div id="float-messages" class="absolute inset-0 z-20 pointer-events-none"></div>
+                <div id="status-label" class="absolute bottom-16 text-center w-full text-slate-500 font-bold tracking-[0.3em] opacity-0 transition-opacity duration-1000 text-sm">CONNECTING THE DOTS</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ICONS = {
+            discord: '<svg viewBox="0 0 24 24" fill="#5865F2"><path d="M20.3 4.3c-1.5-0.7-3.2-1.2-4.9-1.5-0.2 0.4-0.5 0.9-0.7 1.4-1.8-0.3-3.6-0.3-5.3 0-0.2-0.5-0.4-1-0.7-1.4-1.7 0.3-3.4 0.8-4.9 1.5C0.8 11.2-0.5 17.9 0.2 24.5c2.9 2.2 5.8 3.5 8.6 4.4 0.7-0.9 1.3-1.9 1.8-3-1-0.4-2-0.9-2.9-1.5 0.2-0.2 0.5-0.4 0.7-0.7 5.6 2.6 11.6 2.6 17.2 0 0.2 0.2 0.5 0.5 0.7 0.7-0.9 0.6-1.9 1.1-2.9 1.5 0.5 1.1 1.1 2.1 1.8 3 2.8-0.9 5.7-2.1 8.6-4.4 0.1-6.6-1.2-13.3-3.7-20.2z"/></svg>',
+            slack: '<svg viewBox="0 0 256 256"><path fill="#E01E5A" d="M53.84 161.32c0 14.83-11.98 26.82-26.82 26.82-14.83 0-26.82-11.99-26.82-26.82s11.99-26.82 26.82-26.82h26.82v26.82zm13.41 0c0-14.83 11.99-26.82 26.82-26.82s26.82 11.99 26.82 26.82v67.05c0 14.83-11.99 26.82-26.82 26.82-14.83 0-26.82-11.99-26.82-26.82z"/><path fill="#36C5F0" d="M94.07 53.64c-14.83 0-26.82-11.99-26.82-26.82s11.99-26.82 26.82-26.82h26.82z"/></svg>',
+            telegram: '<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="#229ED9"/><path d="M25 50l40-20-5 35-15 10" fill="#FFF"/></svg>',
+            feishu: '<svg viewBox="0 0 24 24" fill="#00C2A8"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>'
+        };
+
+        const DATA = {
+            prompt: "Based on this week's conversations, what should we prioritize next?",
+            reply: [
+                "One pattern keeps repeating: **teams want a review step before Lucius sends the reply.**",
+                "Lucius can see it because the signal lives inside support edits and escalation notes.",
+                "I'd prioritize a lightweight review step. That's a recommendation backed by real behavior."
+            ].join("\n\n"),
+            messages: [
+                { plat: 'discord', author: 'Support lead', text: 'Manual edit before send.', x: 20, y: 30 },
+                { plat: 'feishu', author: 'Ops handoff', text: 'Repeating handoff pattern.', x: 82, y: 35 },
+                { plat: 'slack', author: 'PM feedback', text: 'Review request.', x: 78, y: 65 },
+                { plat: 'telegram', author: 'Escalation note', text: 'Escalation risk.', x: 25, y: 70 }
+            ]
+        };
+
+        const $ = id => document.getElementById(id);
+        const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+        async function start() {
+            await sleep(1500);
+            
+            // 步骤 1: 打字过程
+            const composer = $('composer-text');
+            const cursor = $('typing-cursor');
+            for (let char of DATA.prompt) {
+                composer.innerText += char;
+                cursor.style.left = (20 + composer.offsetWidth) + 'px';
+                await sleep(50 + Math.random() * 30);
+            }
+            $('send-btn').classList.replace('opacity-30', 'opacity-100');
+            await sleep(1000);
+
+            // 步骤 2: 发送并切换图层
+            const msgList = $('chat-messages');
+            const userMsg = document.createElement('div');
+            userMsg.className = 'self-end bg-[#f2e9da] p-4 rounded-2xl shadow-sm text-lg message-anim max-w-[80%]';
+            userMsg.innerText = DATA.prompt;
+            msgList.appendChild(userMsg);
+            composer.innerText = '';
+            cursor.style.left = '20px';
+            
+            await sleep(1200);
+
+            // 步骤 3: 分析层展开
+            $('recording-overlay').classList.add('opacity-100');
+            $('status-label').classList.add('opacity-100');
+            
+            const orbit = $('orbit-logos');
+            ['discord', 'slack', 'telegram', 'feishu'].forEach((p, i) => {
+                const el = document.createElement('div');
+                el.className = 'orbit-item w-16 h-16 rounded-full bg-white shadow-xl flex items-center justify-center p-3 border border-slate-100';
+                el.innerHTML = ICONS[p];
+                orbit.appendChild(el);
+            });
+
+            await sleep(2000);
+
+            // 步骤 4: 分发消息
+            const svg = $('connections-svg');
+            const floatArea = $('float-messages');
+            for (let m of DATA.messages) {
+                const bubble = document.createElement('div');
+                bubble.className = 'absolute p-4 bg-white rounded-xl shadow-2xl border border-slate-50 w-52 opacity-0 transition-all duration-1000 z-50';
+                bubble.style.left = m.x + '%';
+                bubble.style.top = m.y + '%';
+                bubble.innerHTML = `<div class="text-[9px] font-bold text-slate-400 uppercase mb-1">${m.author}</div><p class="text-xs text-slate-600 font-medium">${m.text}</p>`;
+                floatArea.appendChild(bubble);
+                
+                setTimeout(() => {
+                    bubble.classList.replace('opacity-0', 'opacity-100');
+                    const line = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    const x1 = svg.clientWidth/2, y1 = svg.clientHeight/2;
+                    const x2 = (m.x/100)*svg.clientWidth, y2 = (m.y/100)*svg.clientHeight;
+                    line.setAttribute('d', `M ${x1} ${y1} Q ${(x1+x2)/2} ${(y1+y2)/2 - 30}, ${x2} ${y2}`);
+                    line.setAttribute('stroke', 'rgba(85,56,199,0.2)');
+                    line.setAttribute('stroke-width', '2');
+                    line.setAttribute('fill', 'none');
+                    line.setAttribute('class', 'connection-line');
+                    svg.appendChild(line);
+                }, Math.random() * 1500);
+            }
+
+            await sleep(5000);
+            $('recording-overlay').classList.remove('opacity-100');
+            await sleep(1000);
+
+            // 步骤 5: AI 回复流式展示
+            const aiBubble = document.createElement('div');
+            aiBubble.className = 'self-start bg-white border border-[#ddd4c6] p-5 rounded-2xl shadow-sm text-lg message-anim max-w-[85%] leading-relaxed';
+            msgList.appendChild(aiBubble);
+            
+            for (let chunk of DATA.reply.split('')) {
+                aiBubble.innerText += chunk;
+                msgList.scrollTop = msgList.scrollHeight;
+                await sleep(20 + Math.random() * 15);
+            }
+        }
+
+        window.onload = start;
+    </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+# Complete Plan
+
+- Asset slug: `ai-heavy-catch-you`
+- Aspect ratio: `16:9`
+- Duration target: `8.6s`
+
+## Persistent Constraints
+
+### Brand Constraints
+
+- Color roles:
+  - Discord 社区频道页保留深色社区结构，但不照搬原生 Discord 默认皮肤。
+  - 中间消息区、频道 header 和状态强调统一引入克制的 Lucius Purple 线性强调。
+  - 最后一屏完整切到 Lucius Purple 主底，作为品牌反转主舞台。
+- Type roles:
+  - `SF Pro` 承担 Discord mock 中的频道名、消息文案、bot 标签、状态章和所有界面元信息。
+  - `Recoleta` 不进入前三屏密集 UI，只允许在最后品牌页的极少量 closing phrase 中出现一次，甚至可以完全不用。
+  - 所有上屏文案都必须短，且只保留单条主信息。
+- Radius rules:
+  - 前三屏虽然参考 Discord 社区频道骨架，但消息卡、状态章、输入框和面板边界统一改成更柔和的 Lucius 圆角体系。
+  - 第四屏的 AI 空话卡片和 Lucius logo 容器也必须延续同一套圆角语言。
+- Background rules:
+  - 前三屏使用深石墨灰、煤灰和更深 server rail 的层级关系，形成清晰的 Discord 频道页空间。
+  - 第四屏使用纯净 Lucius Purple 主底，边缘只保留极轻的 Orchid Bloom / Lavender Mist 晕染。
+- Graphic language:
+  - 前三屏保留“真实社区工具”的信息架构感，但视觉执行必须更干净、更克制、更有 Lucius 的秩序感。
+  - 第四屏必须像一个品牌舞台，而不是特效秀。
+- Motion tone:
+  - 每屏只有一个主动作。
+  - 动作必须安静、精确、可读，避免躁动、抖动、并行炫技。
+- Prohibited patterns:
+  - 不允许多个 UI 区域同时吸引注意力。
+  - 不允许文字堆叠或超过单屏阅读负荷。
+  - 不允许把 Lucius 品牌页做成廉价赛博或爆炸式特效页。
+
+### Base Motion Constraints
+
+- onePrimaryMotionPerScreen: true
+- lessIsMore: true
+- minimalCopy: true
+- noTextOverlap: true
+- singleProofPath: true
+- quietlyConfidentMotion: true
+
+## Style Mapping
+
+- Color roles:
+  - `#1E1F22` 到 `#2B2D31` 作为 Discord 社区深色结构底。
+  - `Lucius Purple` 只用于频道高亮、消息边线、bot 识别和最终品牌场。
+  - `Warm Ivory` 不进入前三屏大底，只在第四屏环绕卡片内部小面积做文案承载层。
+- Type roles:
+  - 顶部频道名、频道列表、成员名、消息正文全部用 `SF Pro`。
+  - 频道元信息和 bot 标签用更小一层的紧凑字号。
+  - 每屏上屏主文案只保留一句，且布局上必须先让位给主动作。
+- Radius rules:
+  - 服务器图标保留圆形。
+  - 频道列表 hover/selected 行、消息气泡、状态章、AI 空话卡片统一使用 14 到 20px 的柔和圆角。
+- Spacing rules:
+  - Discord mock 各列之间保持明确分区，不允许中间消息区被侧栏挤压得太满。
+  - 中间消息区每屏只允许一个主阅读块位于视觉中心，周围保留足够负空间。
+  - 第四屏 logo 与卡片之间要有明确环绕距离，避免卡片贴脸拥挤。
+- Background rules:
+  - 前三屏延续同一张 Discord 社区页视角，不切换到第二套界面。
+  - 第四屏是纯品牌舞台，背景里不再出现任何 Discord 分栏痕迹。
+- Motion rules:
+  - `screen-01` 只动投诉消息。
+  - `screen-02` 只动 AI 回复卡。
+  - `screen-03` 只动已解决状态章。
+  - `screen-04` 只动 logo 脉冲，周围卡片仅作为同一动作的被动响应。
+- Prohibited patterns:
+  - 不允许频道列表、成员栏、顶部 header 同时出现附加动画。
+  - 不允许消息全文长段滚动。
+  - 不允许最终品牌页里每张卡片自己做独立节奏。
+
+## Screens
+
+### Screen `screen-01-payment-pain`
+
+- Goal: 在 Discord 社区频道里把“支付失败 3 天了”的投诉立刻打成高压问题。
+- UI surface: 参考 Figma `node 1:12097` 的 Discord 社区频道页骨架，频道改写成 `#payment-help`。
+- Layout:
+  - 最左是一列 server icons，选中服务器使用 Lucius Purple 细高亮而不是原生蓝紫。
+  - 左中是频道列表，当前频道 `#payment-help` 被选中，其他频道全部静止且弱化。
+  - 顶部 header 显示 `#payment-help` 与一行很短的 support 频道说明。
+  - 中间消息区保留一条历史分隔线和一条最新投诉消息，消息卡占据视觉中心偏左位置。
+  - 右侧成员列表只作为环境证据保留，不承担阅读任务。
+- Background:
+  - server rail 用最深石墨灰。
+  - channel list 用次深煤灰。
+  - main feed 用稍亮一点的深灰，让主消息更易读。
+  - 当前频道的细边线和消息卡微边线使用很克制的 Lucius Purple。
+- Copy:
+  - `支付失败 3 天了`
+  - `我想付款都失败`
+- Primary motion: 用户投诉消息从消息区下方滑入并停住。
+- Motion sequence:
+  - 画面以静止 Discord 社区页开场。
+  - 用户投诉消息卡自下向上滑入 48 到 64px。
+  - 消息卡停止后，其余所有区域继续完全静止。
+- Proof element:
+  - `支付失败`
+  - `3 天`
+  - `付款都失败`
+- Required assets:
+  - Discord 社区频道页结构参考：Figma `pFIQI6NOxpoptBs9TIrA5s / node 1:12097`
+  - 自定义 `#payment-help` 频道文案与状态样式
+- Timing hint: `2.2s`
+
+### Screen `screen-02-empty-comfort`
+
+- Goal: 让观众意识到，AI 的回复听起来很会说话，但完全没有执行价值。
+- UI surface: 同一张 Discord 社区频道页，不换视角，不换频道，不换结构。
+- Layout:
+  - 上一屏的投诉消息保留在消息区上半部，作为事实底板。
+  - AI 客服消息卡出现在它正下方，带一个很轻的 `BOT` 标识。
+  - 左侧频道列表、顶部 header、右侧成员栏和底部输入框全部保持静止。
+  - AI 回复卡是这屏唯一新的阅读中心。
+- Background:
+  - 延续第一屏相同的 Discord 深色结构。
+  - 回复卡背景比投诉卡更平整，边缘带极轻的 Lucius Purple 边线，暗示“看起来很 polished”。
+- Copy:
+  - `我会稳稳接住你`
+- Primary motion: AI 回复卡以一次柔和展开进入消息区中央。
+- Motion sequence:
+  - 投诉消息维持静止。
+  - AI 回复卡从 96% 缩放到 100%，同时透明度由 0 到 1。
+  - 回复卡停稳后不再追加任何第二动作。
+- Proof element:
+  - 回复只有安抚，没有步骤。
+  - 回复没有时间承诺，没有动作承诺，没有解决路径。
+- Required assets:
+  - Support bot message card 样式
+  - 轻量 BOT 标签
+- Timing hint: `1.9s`
+
+### Screen `screen-03-fake-resolution`
+
+- Goal: 让“没有解决问题却宣布已解决”的荒谬感成立。
+- UI surface: 仍然是 `#payment-help` 频道消息区，沿用同一张 Discord 社区页。
+- Layout:
+  - 投诉消息和安抚消息都还在，但亮度降下来，退成背景证据。
+  - 一枚清晰的 `已解决` 状态章落在 AI 回复附近，作为这屏唯一视觉中心。
+  - 频道列表和成员列表维持环境静止，不新增额外回复流。
+- Background:
+  - Discord 深色结构不变。
+  - 状态章允许使用比前三屏更亮一点的对比色，但仍要在 Lucius 体系中，不做大红大绿。
+- Copy:
+  - `问题已解决`
+- Primary motion: `已解决` 状态章从上方直落并贴住消息区。
+- Motion sequence:
+  - 前两条消息先维持静止。
+  - 状态章从上方快速落下 56 到 72px。
+  - 落地后做一次极轻的停顿式压缩回弹，然后立即静止。
+- Proof element:
+  - `已解决` 出现时，用户投诉事实仍然清晰存在。
+  - 观众能一眼看出这是“假关单”。
+- Required assets:
+  - 已解决状态章样式
+  - 消息区压弱态样式
+- Timing hint: `1.9s`
+
+### Screen `screen-04-lucius-clearance`
+
+- Goal: 把前三屏的 AI 空话抽象成噪音，再由 Lucius 一次性清场，完成品牌反转。
+- UI surface: 纯 Lucius Purple 品牌页。
+- Layout:
+  - 画面中央是 Lucius logo，尺寸足够大，成为绝对视觉中心。
+  - 周围环绕 5 到 7 张 AI 空话卡片，组成松散圆环。
+  - 卡片文案只取前面空话的短句碎片，比如 `我会接住你`、`请耐心等待`、`问题已解决`。
+  - 卡片之间保持不规则但平衡的距离，不能像弹幕一样挤在一起。
+- Background:
+  - 整屏使用 Lucius Purple 主底。
+  - 角落和边缘只允许一层非常轻的 Orchid Bloom / Lavender Mist 氛围晕染。
+  - 不保留任何 Discord 结构残影，让转场足够干净。
+- Copy:
+  - `把空话弹开`
+- Primary motion: Lucius logo 一次内聚后向外释放脉冲，把环绕卡片统一弹飞。
+- Motion sequence:
+  - 先从 Discord 社区页做一次干净淡切，进入品牌页静止态。
+  - logo 做一次极短的内聚，像在蓄力。
+  - 一圈干净脉冲向外推出，所有卡片同步离心弹飞并淡出。
+  - logo 留在中心稳住，形成收尾。
+- Proof element:
+  - Lucius 成为“清理 AI 空话”的唯一动作源。
+  - 所有空话卡片都被统一清场，而不是继续环绕喧闹。
+- Required assets:
+  - Lucius logo approved variant
+  - AI 空话卡片样式
+  - 品牌页轻光晕背景
+- Timing hint: `2.6s`
+
+## Implementation Notes
+
+- 前三屏必须忠实使用你给的 Discord 社区频道页 Figma 作为骨架参考，但中间主区内容改写为这条素材自己的 support thread。
+- Discord 社区页的真实感来自结构，不来自逐像素照抄；品牌感来自配色、圆角、留白和动效气质。
+- 第四屏必须让 Lucius 的反转足够明确，但不能变成炫技特效；主动作始终是 logo 脉冲，不是卡片乱飞本身。
+- 如果后续进入 CSS 实现，前三屏建议使用同一套页面骨架，只切换中心消息层内容和单一主动作，以保证节奏干净。
+
+## Acceptance Checks
+
+- 每屏只有一个主动作，且观众能在 0.5 秒内指出“这一屏究竟是什么在动”。
+- 前三屏的频道页结构一眼能认出是 Discord 社区频道，不是泛化聊天页。
+- 所有文案在 `16:9` 下不重叠、不拥挤，并且无需暂停也能读懂主信息。
+- Lucius 品牌规范能在颜色、字体职责、圆角、背景语气和动效气质里被看出来。
+- 第四屏的清场动作能成立为明确的品牌反转，而不是单纯的视觉噱头。

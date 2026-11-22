@@ -1,0 +1,63 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    "Segoe UI",
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background:
+    radial-gradient(circle at top left, rgba(82, 94, 181, 0.38), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(37, 191, 154, 0.16), transparent 32%),
+    #07090f;
+  color: #eff4ff;
+  --ink-strong: #f3f6ff;
+  --ink-soft: rgba(230, 236, 255, 0.74);
+  --ink-faint: rgba(190, 198, 223, 0.54);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}

@@ -1,0 +1,262 @@
+{
+  "caseSlug": "case-study-dubbingai-discord",
+  "scenes": [
+    {
+      "sceneId": "scene-setup",
+      "sceneGoal": "Establish DubbingAI, Discord, and the support scale before the overload begins.",
+      "staticStates": [
+        "Opening frame: editorial headline block on the left with DubbingAI and 30K-member Discord community.",
+        "Mid-state: a Discord-like thread field expands on the right with several visible conversations at different depths.",
+        "Hold state: the frame clearly communicates customer, platform, and scale.",
+        "Exit state: unresolved density begins to build on the right."
+      ],
+      "motionSteps": [
+        "Threads slide in from staggered offsets and settle into a structured cluster.",
+        "Unread indicators and line pulses wake up softly as threads arrive.",
+        "The dot-grid texture drifts subtly to keep the field alive.",
+        "Right-side density increases just before the transition out."
+      ],
+      "timing": {
+        "durationMs": 6800,
+        "hold": "A clean readable hold after the thread cluster settles"
+      },
+      "easing": {
+        "primary": "ease-out",
+        "secondary": "gentle stagger"
+      },
+      "assetBindings": [],
+      "templateBindings": [],
+      "copySlots": {
+        "headline": "DubbingAI",
+        "subhead": "30K-member Discord community",
+        "body": "A fast-growing product community where support volume started outpacing the team.",
+        "labels": [
+          "Discord",
+          "30K Members",
+          "Product Support"
+        ]
+      }
+    },
+    {
+      "sceneId": "scene-overload",
+      "sceneGoal": "Show repeated support work piling up faster than the small human team can absorb it.",
+      "staticStates": [
+        "Opening frame: threads from scene setup remain, but more unresolved cards are stacked.",
+        "Mid-state: repeated question cards dominate the left while a three-person operator lane sits on the right.",
+        "Hold state: repeated questions, escalation burden, and a small on-call team are all readable.",
+        "Exit state: the queue freezes in a too-much-work state."
+      ],
+      "motionSteps": [
+        "Question cards stack upward and forward in staggered waves.",
+        "Three operator markers light up one by one and remain pinned.",
+        "Escalation flags appear on selected cards and stay visible.",
+        "A short pause lands before Lucius enters."
+      ],
+      "timing": {
+        "durationMs": 7000,
+        "hold": "Freeze on overloaded queue before Lucius enters"
+      },
+      "easing": {
+        "primary": "ease-out",
+        "secondary": "stacked stagger"
+      },
+      "assetBindings": [],
+      "templateBindings": [],
+      "copySlots": {
+        "headline": "The same questions kept coming back.",
+        "body": "Repeated setup questions, escalation burden, and a small team staying on-call all the time.",
+        "labels": [
+          "Repeated Questions",
+          "Escalation Queue",
+          "3 Human Mods"
+        ]
+      }
+    },
+    {
+      "sceneId": "scene-lucius",
+      "sceneGoal": "Position Lucius inside the workflow as the system that turns noisy support activity into reusable structure.",
+      "staticStates": [
+        "Opening frame: queue density remains and the Lucius node is only partially visible.",
+        "Mid-state: a three-column frame shows live inputs on the left, Lucius in the center, and structured outputs on the right.",
+        "Hold state: Lucius is visibly inside the workflow and both inputs and outputs are readable.",
+        "Exit state: structured notes stabilize and prepare the learning-loop explanation."
+      ],
+      "motionSteps": [
+        "Repeated question cards collapse into signal chips that travel into the Lucius node.",
+        "Structured notes re-emerge on the right in a short stagger.",
+        "Connector lines draw only after the chip movement is established.",
+        "A few input chips continue drifting while the outputs settle."
+      ],
+      "timing": {
+        "durationMs": 7600,
+        "hold": "A stable three-column hold with readable inputs and outputs"
+      },
+      "easing": {
+        "primary": "ease-out",
+        "secondary": "short stagger"
+      },
+      "assetBindings": [
+        {
+          "assetId": "assets/brand/lucius",
+          "usage": "Center Lucius node and brand anchor"
+        }
+      ],
+      "templateBindings": [],
+      "copySlots": {
+        "headline": "Lucius learns from actual community behavior.",
+        "body": "Repeated questions become structured support logic. Noisy activity resolves into reusable patterns.",
+        "labels": [
+          "Live Inputs",
+          "Lucius",
+          "Structured Outputs"
+        ]
+      }
+    },
+    {
+      "sceneId": "scene-loop",
+      "sceneGoal": "Explain why Lucius improves over time instead of behaving like a frozen rules bot.",
+      "staticStates": [
+        "Opening frame: one anchor card appears first while the rest of the loop is absent.",
+        "Mid-state: four linked cards assemble into a readable system loop.",
+        "Hold state: the full loop is assembled and readable after one complete cycle.",
+        "Exit state: the final loop token moves toward the results scene."
+      ],
+      "motionSteps": [
+        "Cards assemble from dispersed positions into a loop.",
+        "A single signal token travels through the steps in order.",
+        "Each card wakes up when the token reaches it and then settles.",
+        "Connectors brighten only while active."
+      ],
+      "timing": {
+        "durationMs": 7600,
+        "hold": "One clean assembled-loop hold after a single cycle"
+      },
+      "easing": {
+        "primary": "ease-out",
+        "secondary": "ordered step transitions"
+      },
+      "assetBindings": [],
+      "templateBindings": [],
+      "copySlots": {
+        "headline": "Lucius keeps improving.",
+        "subhead": "Four-step learning system",
+        "labels": [
+          "Onboard from history",
+          "Learn in the flow",
+          "Optimize over time",
+          "Escalate edge cases"
+        ]
+      }
+    },
+    {
+      "sceneId": "scene-results",
+      "sceneGoal": "Land the operating-model change through restrained, readable proof points.",
+      "staticStates": [
+        "Opening frame: the learning loop recedes into a structured background.",
+        "Mid-state: a balanced field presents five metrics and one results statement.",
+        "Hold state: all five metrics are readable without competition.",
+        "Exit state: metrics soften while a human quote anchor begins to emerge."
+      ],
+      "motionSteps": [
+        "Metric tiles rise or lock into place one by one with restrained stagger.",
+        "The 3 -> 0 tile animates as a reduction instead of a generic pop-in.",
+        "The 80% tile settles with understated fill behavior.",
+        "The metric field gently recedes to make space for the quote."
+      ],
+      "timing": {
+        "durationMs": 6800,
+        "hold": "A clean metrics read"
+      },
+      "easing": {
+        "primary": "ease-out",
+        "secondary": "restrained stagger"
+      },
+      "assetBindings": [],
+      "templateBindings": [],
+      "copySlots": {
+        "headline": "Real operating-model change.",
+        "labels": [
+          "30K Members",
+          "80% Automation",
+          "15 Days",
+          "3 -> 0 Human Mods",
+          "24/7 Coverage"
+        ]
+      }
+    },
+    {
+      "sceneId": "scene-human",
+      "sceneGoal": "Turn the operational result into a human outcome: real relief while support keeps running.",
+      "staticStates": [
+        "Opening frame: metrics from the previous scene remain faintly in the background.",
+        "Mid-state: a large editorial quote sits left while a calm support panel sits right.",
+        "Hold state: quote and panel are both readable together.",
+        "Exit state: the support panel reduces into minimal structure and the quote fades gently."
+      ],
+      "motionSteps": [
+        "Overloaded system language dissolves into a calmer operating panel.",
+        "Support panel rows pulse softly to show continuity.",
+        "The holiday marker arrives late as the emotional payoff.",
+        "The scene breathes with slow, spacious motion."
+      ],
+      "timing": {
+        "durationMs": 7000,
+        "hold": "A relief-focused hold with calm continuity"
+      },
+      "easing": {
+        "primary": "ease-out",
+        "secondary": "slow settle"
+      },
+      "assetBindings": [],
+      "templateBindings": [],
+      "copySlots": {
+        "quote": "Lucius basically gave me my holidays back.",
+        "labels": [
+          "Support Status",
+          "Team on holiday. Support still running."
+        ]
+      }
+    },
+    {
+      "sceneId": "scene-method",
+      "sceneGoal": "End on the broader principle: better support creates the conditions for a living community.",
+      "staticStates": [
+        "Opening frame: geometry from the human outcome scene is still faintly visible.",
+        "Mid-state: four stable channel bars sit opposite the final principle line.",
+        "Hold state: the principle remains on screen for the longest clean read in the sequence.",
+        "Exit state: no CTA; the scene ends in stability."
+      ],
+      "motionSteps": [
+        "Dense support geometry collapses into four stable channel bars.",
+        "The dot-field reorders itself lightly as the structure simplifies.",
+        "Channel bars settle one by one.",
+        "The final editorial headline resolves in with confidence, not drama."
+      ],
+      "timing": {
+        "durationMs": 8200,
+        "hold": "Longest clean read of the sequence"
+      },
+      "easing": {
+        "primary": "ease-out",
+        "secondary": "calm sequential settle"
+      },
+      "assetBindings": [
+        {
+          "assetId": "assets/brand/logo-mark-black",
+          "usage": "Brand-aligned structural mark when needed"
+        }
+      ],
+      "templateBindings": [],
+      "copySlots": {
+        "headline": "Better support keeps the room alive.",
+        "supportCopy": "Lucius helps create the conditions for a living community that can sustain participation.",
+        "labels": [
+          "general",
+          "help",
+          "showcase",
+          "announcements"
+        ]
+      }
+    }
+  ]
+}

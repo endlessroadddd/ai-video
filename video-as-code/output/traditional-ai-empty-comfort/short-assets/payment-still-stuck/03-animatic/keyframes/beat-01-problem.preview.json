@@ -1,0 +1,40 @@
+{
+  "caseSlug": "traditional-ai-empty-comfort",
+  "assetSlug": "payment-still-stuck",
+  "beatId": "beat-01-problem",
+  "type": "beat-keyframe-review",
+  "singleTakeaway": "Soft AI reassurance is useless when the actual payment problem is still unresolved.",
+  "purpose": "Establish the high-stakes user complaint immediately.",
+  "copyLine": "Payment still fails after 3 days.",
+  "durationHint": "2.2s",
+  "visualState": [
+    "Community support chat is open.",
+    "The user's complaint is visible with emphasis on payment and three days of failure."
+  ],
+  "motionCue": [
+    "User message slides in and key pain phrases gain subtle emphasis.",
+    "Nearby support clutter stays secondary."
+  ],
+  "proofBinding": [
+    "payment failed",
+    "3 days"
+  ],
+  "matchType": "fresh-design",
+  "assetBindingIds": [],
+  "templateBindingIds": [],
+  "fallbackImplementation": [
+    "Build a generic community support panel with one dominant complaint card and restrained UI chrome."
+  ],
+  "hardConstraints": [
+    "Keep the asset within 6-10 seconds and optimize for silent-first readability.",
+    "The failing payment state must be the most visually credible proof shot in the sequence.",
+    "The generic AI assistant surface must not resemble Lucius branding or Lucius UI language.",
+    "Use Lucius brand discipline for composition quality and motion restraint, but do not make the broken assistant feel like Lucius.",
+    "No flashy AI magic, neon beams, or over-the-top glitch effects."
+  ],
+  "reviewQuestions": [
+    "Is the beat understandable at first glance?",
+    "Does the copy fit the duration hint?",
+    "Is the proof binding visible enough?"
+  ]
+}

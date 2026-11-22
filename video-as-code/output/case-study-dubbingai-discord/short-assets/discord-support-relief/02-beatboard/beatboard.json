@@ -1,0 +1,80 @@
+{
+  "assetSlug": "discord-support-relief",
+  "sequenceGoal": "Show support overload, then show Lucius taking the repetitive layer, then land on the operating-model proof.",
+  "durationTarget": 8,
+  "aspectRatio": "16:9",
+  "soundMode": "silent-first",
+  "brandRole": "closing-tag",
+  "beats": [
+    {
+      "beatId": "beat-01-hook",
+      "purpose": "Establish support overload immediately.",
+      "visualState": [
+        "Repetitive Discord support questions stack rapidly.",
+        "Unread and issue markers spike in a tight crop."
+      ],
+      "motionCue": [
+        "Question cards stack bottom-to-top.",
+        "Badges pulse once to create pressure."
+      ],
+      "copyLine": "Support never stops.",
+      "durationHint": "1.8s",
+      "proofBinding": [
+        "30K members"
+      ],
+      "matchType": "fresh-design",
+      "assetBindingIds": [],
+      "templateBindingIds": [],
+      "fallbackImplementation": [
+        "Build a compact Discord-like support surface with tight unread density."
+      ]
+    },
+    {
+      "beatId": "beat-02-takeover",
+      "purpose": "Show Lucius taking over the repetitive support layer.",
+      "visualState": [
+        "Lucius replies begin to answer repeated questions consistently.",
+        "Unresolved markers visibly drop."
+      ],
+      "motionCue": [
+        "Responses appear in a calm, reliable cadence.",
+        "Pressure indicators de-emphasize while the conversation keeps moving."
+      ],
+      "copyLine": "Lucius handles the repetitive layer.",
+      "durationHint": "3.0s",
+      "proofBinding": [
+        "80% automation in 15 days"
+      ],
+      "matchType": "fresh-design",
+      "assetBindingIds": [],
+      "templateBindingIds": [],
+      "fallbackImplementation": [
+        "Reuse the same support surface and shift the emphasis from overload to stable coverage."
+      ]
+    },
+    {
+      "beatId": "beat-03-proof",
+      "purpose": "Land the operating-model proof and emotional payoff.",
+      "visualState": [
+        "Moderator count resolves from 3 to 0.",
+        "A testimonial card lands with the holiday-relief quote."
+      ],
+      "motionCue": [
+        "Count compresses into a single operating-model badge.",
+        "Quote card settles in as the final proof moment."
+      ],
+      "copyLine": "From 3 human mods to 0.",
+      "durationHint": "3.2s",
+      "proofBinding": [
+        "3 -> 0 human mods",
+        "Lucius basically gave me my holidays back."
+      ],
+      "matchType": "fresh-design",
+      "assetBindingIds": [],
+      "templateBindingIds": [],
+      "fallbackImplementation": [
+        "Build a clean proof card layout that keeps the quote readable at short-form speed."
+      ]
+    }
+  ]
+}

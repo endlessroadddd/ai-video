@@ -1,0 +1,29 @@
+/* eslint-disable */
+import { getLocale, experimentalStaticLocale } from '../runtime.js';
+
+/** @typedef {import('../runtime.js').LocalizedString} LocalizedString */
+
+/** @typedef {{}} Event_Settings_Label_Type_NameInputs */
+
+const en_event_settings_label_type_name = /** @type {(inputs: Event_Settings_Label_Type_NameInputs) => LocalizedString} */ () => {
+	return /** @type {LocalizedString} */ (`Type name`)
+};
+
+const zh_event_settings_label_type_name = /** @type {(inputs: Event_Settings_Label_Type_NameInputs) => LocalizedString} */ () => {
+	return /** @type {LocalizedString} */ (`类型名称`)
+};
+
+/**
+* | output |
+* | --- |
+* | "Type name" |
+*
+* @param {Event_Settings_Label_Type_NameInputs} inputs
+* @param {{ locale?: "en" | "zh" }} options
+* @returns {LocalizedString}
+*/
+export const event_settings_label_type_name = /** @type {((inputs?: Event_Settings_Label_Type_NameInputs, options?: { locale?: "en" | "zh" }) => LocalizedString) & import('../runtime.js').MessageMetadata<Event_Settings_Label_Type_NameInputs, { locale?: "en" | "zh" }, {}>} */ ((inputs = {}, options = {}) => {
+	const locale = experimentalStaticLocale ?? options.locale ?? getLocale()
+	if (locale === "en") return en_event_settings_label_type_name(inputs)
+	return zh_event_settings_label_type_name(inputs)
+});

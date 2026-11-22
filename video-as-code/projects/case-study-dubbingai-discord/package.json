@@ -1,0 +1,10 @@
+{
+  "name": "@lucius-vac/case-study-dubbingai-discord",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python -m http.server 3006",
+    "preview": "python -m http.server 3006",
+    "build": "python -c \"print('Static project: no build step required.')\""
+  }
+}

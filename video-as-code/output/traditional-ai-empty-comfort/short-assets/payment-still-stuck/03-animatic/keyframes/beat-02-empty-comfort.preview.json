@@ -1,0 +1,39 @@
+{
+  "caseSlug": "traditional-ai-empty-comfort",
+  "assetSlug": "payment-still-stuck",
+  "beatId": "beat-02-empty-comfort",
+  "type": "beat-keyframe-review",
+  "singleTakeaway": "Soft AI reassurance is useless when the actual payment problem is still unresolved.",
+  "purpose": "Show the assistant giving comfort without help.",
+  "copyLine": "We've received your issue.",
+  "durationHint": "2.0s",
+  "visualState": [
+    "The AI support reply appears polished, friendly, and useless.",
+    "The reply centers on reassurance rather than action."
+  ],
+  "motionCue": [
+    "Reply card expands softly into view.",
+    "Key reassurance language lingers longer than the useful information because there is no useful information."
+  ],
+  "proofBinding": [
+    "issue already received"
+  ],
+  "matchType": "fresh-design",
+  "assetBindingIds": [],
+  "templateBindingIds": [],
+  "fallbackImplementation": [
+    "Keep the assistant response visually competent but semantically empty."
+  ],
+  "hardConstraints": [
+    "Keep the asset within 6-10 seconds and optimize for silent-first readability.",
+    "The failing payment state must be the most visually credible proof shot in the sequence.",
+    "The generic AI assistant surface must not resemble Lucius branding or Lucius UI language.",
+    "Use Lucius brand discipline for composition quality and motion restraint, but do not make the broken assistant feel like Lucius.",
+    "No flashy AI magic, neon beams, or over-the-top glitch effects."
+  ],
+  "reviewQuestions": [
+    "Is the beat understandable at first glance?",
+    "Does the copy fit the duration hint?",
+    "Is the proof binding visible enough?"
+  ]
+}

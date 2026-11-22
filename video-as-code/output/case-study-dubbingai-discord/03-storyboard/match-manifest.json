@@ -1,0 +1,76 @@
+[
+  {
+    "sceneId": "scene-setup",
+    "matchType": "fresh-design",
+    "matchedAssetIds": [],
+    "matchedTemplateIds": [],
+    "modifications": [
+      "Build a premium Discord-like field rather than reusing a generic card template."
+    ],
+    "fallbackImplementationPlan": "Implement custom thread strips, unread indicators, and a subtle dot-grid background inside the case-study project."
+  },
+  {
+    "sceneId": "scene-overload",
+    "matchType": "fresh-design",
+    "matchedAssetIds": [],
+    "matchedTemplateIds": [],
+    "modifications": [
+      "Reuse the thread language from scene setup but compress it into a denser support queue."
+    ],
+    "fallbackImplementationPlan": "Implement repeated question cards, escalation flags, and a three-operator response lane as custom scene components."
+  },
+  {
+    "sceneId": "scene-lucius",
+    "matchType": "asset-match",
+    "matchedAssetIds": [
+      "assets/brand/lucius"
+    ],
+    "matchedTemplateIds": [],
+    "modifications": [
+      "Use the Lucius mark as the center node inside a custom three-column workflow layout."
+    ],
+    "fallbackImplementationPlan": "Implement the connector field and structured output notes directly in the scene code while keeping the Lucius brand asset as the central anchor."
+  },
+  {
+    "sceneId": "scene-loop",
+    "matchType": "fresh-design",
+    "matchedAssetIds": [],
+    "matchedTemplateIds": [],
+    "modifications": [
+      "Express the learning loop as a custom four-card system diagram."
+    ],
+    "fallbackImplementationPlan": "Implement a custom four-card loop with one traveling token and restrained connector activity."
+  },
+  {
+    "sceneId": "scene-results",
+    "matchType": "fresh-design",
+    "matchedAssetIds": [],
+    "matchedTemplateIds": [],
+    "modifications": [
+      "Build a metric grid designed specifically for this case's proof points."
+    ],
+    "fallbackImplementationPlan": "Implement five bespoke metric tiles with restrained stagger and a reduction animation for the 3 -> 0 proof point."
+  },
+  {
+    "sceneId": "scene-human",
+    "matchType": "fresh-design",
+    "matchedAssetIds": [],
+    "matchedTemplateIds": [],
+    "modifications": [
+      "Shift from metrics to human relief using a custom quote-plus-panel composition."
+    ],
+    "fallbackImplementationPlan": "Implement a left editorial quote and a right calm support panel with softly pulsing rows."
+  },
+  {
+    "sceneId": "scene-method",
+    "matchType": "asset-match",
+    "matchedAssetIds": [
+      "assets/brand/logo-mark-black"
+    ],
+    "matchedTemplateIds": [],
+    "modifications": [
+      "Use the Lucius brand asset only as a subtle structural cue, not as a dominant hero."
+    ],
+    "fallbackImplementationPlan": "Implement the final principle scene as custom channel bars plus editorial headline, optionally anchored by the brand mark."
+  }
+]

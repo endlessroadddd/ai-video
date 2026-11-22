@@ -1,0 +1,26 @@
+{
+  "caseSlug": "case-study-dubbingai-discord",
+  "assetSlug": "discord-support-relief",
+  "mode": "review-data-only",
+  "keyframeResults": [
+    {
+      "beatId": "beat-01-hook",
+      "status": "prepared",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\short-assets\\discord-support-relief\\03-animatic\\keyframes\\beat-01-hook.preview.json"
+    },
+    {
+      "beatId": "beat-02-takeover",
+      "status": "prepared",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\short-assets\\discord-support-relief\\03-animatic\\keyframes\\beat-02-takeover.preview.json"
+    },
+    {
+      "beatId": "beat-03-proof",
+      "status": "prepared",
+      "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\short-assets\\discord-support-relief\\03-animatic\\keyframes\\beat-03-proof.preview.json"
+    }
+  ],
+  "sequenceResult": {
+    "status": "prepared",
+    "outputPath": "C:\\Users\\ASUS\\Desktop\\Lucius\\video-as-code\\lucius-video-as-code\\output\\case-study-dubbingai-discord\\short-assets\\discord-support-relief\\03-animatic\\animatic\\discord-support-relief-rough-sequence.preview.json"
+  }
+}

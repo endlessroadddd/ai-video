@@ -1,0 +1,206 @@
+{
+  "assetSlug": "payment-still-stuck",
+  "aspectRatio": "16:9",
+  "durationTarget": 9,
+  "persistentConstraints": {
+    "brandConstraints": {
+      "colorRoles": [
+        "Use neutral off-brand colors for the broken assistant UI.",
+        "Reserve stronger contrast for payment failure and blocked states.",
+        "Use Lucius purple only as a restrained closing-tag quality cue."
+      ],
+      "typeRoles": [
+        "Use sans-serif only in the negative example UI.",
+        "Use one strong headline layer with restrained support labels.",
+        "Keep any Lucius closing tag secondary."
+      ],
+      "radiusRules": [
+        "Use soft, consistent rounded corners across chat and payment surfaces.",
+        "Do not mix incompatible corner languages."
+      ],
+      "backgroundRules": [
+        "Use a warm neutral background with quiet depth.",
+        "Keep the background restrained so the proof element remains dominant."
+      ],
+      "graphicLanguage": [
+        "Use clean SaaS UI surfaces and minimal chrome.",
+        "Avoid decorative clutter or joke framing."
+      ],
+      "motionTone": [
+        "Motion should feel quietly confident and readable.",
+        "The final proof state should end in a dead-stop hold."
+      ],
+      "prohibitedPatterns": [
+        "No flashy AI magic or glitch spectacle.",
+        "No overlapping text blocks.",
+        "No competing animated elements on the same screen."
+      ]
+    },
+    "baseMotionConstraints": {
+      "onePrimaryMotionPerScreen": true,
+      "lessIsMore": true,
+      "minimalCopy": true,
+      "noTextOverlap": true,
+      "singleProofPath": true,
+      "quietlyConfidentMotion": true
+    }
+  },
+  "styleMapping": {
+    "colorRoles": [
+      "Use neutral slate and ivory surfaces for the broken assistant UI.",
+      "Use red-toned contrast for payment failure states.",
+      "Use Lucius purple only in the restrained closing tag."
+    ],
+    "typeRoles": [
+      "Use one large headline hierarchy.",
+      "Use compact uppercase metadata labels.",
+      "Keep body copy short and quiet."
+    ],
+    "radiusRules": [
+      "Use one coherent rounded-card system across all surfaces."
+    ],
+    "spacingRules": [
+      "Keep generous whitespace between headline, chat card, and payment proof surface.",
+      "Avoid stacked text density."
+    ],
+    "backgroundRules": [
+      "Use a soft warm gradient with a subtle grid texture."
+    ],
+    "motionRules": [
+      "Use one dominant motion per screen.",
+      "Allow only supporting transitions around the main motion.",
+      "End the final proof screen in a dead-stop hold."
+    ],
+    "prohibitedPatterns": [
+      "No parallel hero motions.",
+      "No crowded chat stacks.",
+      "No meme or parody styling."
+    ]
+  },
+  "screens": [
+    {
+      "screenId": "screen-01-problem",
+      "goal": "Make the money-related failure obvious at first glance.",
+      "uiSurface": "community support chat",
+      "layout": [
+        "Use a left-weighted complaint card with minimal surrounding UI chrome."
+      ],
+      "background": [
+        "Use a warm neutral canvas with a subtle grid."
+      ],
+      "copy": [
+        "Payment still fails after 3 days."
+      ],
+      "primaryMotion": "Complaint card slides in and settles.",
+      "motionSequence": [
+        "Complaint enters.",
+        "Payment-failed badges settle.",
+        "Everything else stays quiet."
+      ],
+      "proofElement": [
+        "Payment failed",
+        "3 days blocked"
+      ],
+      "requiredAssets": [
+        "generic support UI shell",
+        "error badge styling"
+      ],
+      "timingHint": "2.2s"
+    },
+    {
+      "screenId": "screen-02-empty-comfort",
+      "goal": "Show polished reassurance without useful action.",
+      "uiSurface": "assistant reply bubble in the same chat",
+      "layout": [
+        "Keep the complaint readable but secondary while one reply bubble becomes focal."
+      ],
+      "background": [
+        "Keep the same chat environment from screen 01."
+      ],
+      "copy": [
+        "We've received your issue."
+      ],
+      "primaryMotion": "Assistant comfort bubble expands softly into view.",
+      "motionSequence": [
+        "Reply expands.",
+        "A soft glow lingers.",
+        "All other elements remain static."
+      ],
+      "proofElement": [
+        "The reply contains no real fix or operational next step."
+      ],
+      "requiredAssets": [
+        "support AI reply styling"
+      ],
+      "timingHint": "2.0s"
+    },
+    {
+      "screenId": "screen-03-fake-resolution",
+      "goal": "Escalate frustration with a false solved signal.",
+      "uiSurface": "quick user pushback plus reply state",
+      "layout": [
+        "Use a compact exchange with one dominant solved badge and reply card."
+      ],
+      "background": [
+        "Use the same chat environment with a slightly tighter crop."
+      ],
+      "copy": [
+        "It says solved."
+      ],
+      "primaryMotion": "The false resolved state lands abruptly.",
+      "motionSequence": [
+        "User pushback appears quickly.",
+        "Solved state snaps in.",
+        "The frame holds."
+      ],
+      "proofElement": [
+        "Resolved appears before any real product change."
+      ],
+      "requiredAssets": [
+        "resolved badge styling"
+      ],
+      "timingHint": "2.1s"
+    },
+    {
+      "screenId": "screen-04-proof",
+      "goal": "Prove the product is still blocked after the fake resolution.",
+      "uiSurface": "product payment UI",
+      "layout": [
+        "Use one large payment panel that dominates the frame."
+      ],
+      "background": [
+        "Use a warm neutral backdrop and remove chat from focus."
+      ],
+      "copy": [
+        "Still stuck."
+      ],
+      "primaryMotion": "Hard cut into the payment panel followed by a dead-stop hold.",
+      "motionSequence": [
+        "Cut to payment panel.",
+        "Spinner continues briefly.",
+        "Blocked state settles and holds."
+      ],
+      "proofElement": [
+        "Still failing",
+        "Blocked",
+        "Retry disabled"
+      ],
+      "requiredAssets": [
+        "payment panel UI",
+        "status badge styling"
+      ],
+      "timingHint": "2.7s"
+    }
+  ],
+  "implementationNotes": [
+    "Keep the negative assistant visually competent but not Lucius-branded.",
+    "Reserve the Lucius close for the final edge of the piece only.",
+    "The payment panel must dominate the final proof screen and remain readable in silence."
+  ],
+  "acceptanceChecks": [
+    "Every screen has one primary motion only.",
+    "No text overlaps at 16:9.",
+    "The final proof screen is undeniable at first glance.",
+    "Brand constraints stay visible in color, type, radius, background, and motion tone."
+  ]
+}

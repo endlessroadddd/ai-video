@@ -1,0 +1,67 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist2/
+build/
+out/
+.output/
+.nitro/
+.tanstack/
+.vinxi/
+.wrangler/
+.vite/
+.remotion/
+*.tsbuildinfo
+
+# Environment (占位文件 .env.demo / .env.example 保留)
+.env
+.env.local
+*.local
+
+# Rendered video / audio — 成片和录屏不进 git
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.avi
+*.wav
+*.mp3
+*.m4a
+*.aac
+!video-as-code/projects/short-asset-context-layer/public/bg.mp4
+
+# Pipeline render output
+output/**/renders/*
+output/**/preview/generated/*
+output/**/04-preview/generated/*
+_review_frames/
+
+# Source-file binaries
+*.psd
+*.aep
+
+# Scratch
+tmp/
+_tmp/
+_tmp_*/
+*.bak
+*.orig
+
+# Logs
+*.log
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini

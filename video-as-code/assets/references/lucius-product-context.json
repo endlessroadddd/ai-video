@@ -1,0 +1,136 @@
+{
+  "id": "lucius-product-context",
+  "version": "2026-04-04",
+  "sources": [
+    {
+      "type": "pdf",
+      "path": "C:\\Users\\ASUS\\Downloads\\Lucius Sales PPT.pdf"
+    },
+    {
+      "type": "user-supplement",
+      "path": "codex-thread:2026-04-04"
+    }
+  ],
+  "canonicalSummary": "Lucius is an AI-driven customer success and community operations platform designed to work like an AI teammate instead of a passive tool.",
+  "coreIdea": "Make software work like a teammate, not just a tool.",
+  "positioning": {
+    "describeAs": [
+      "AI teammate for community operations and customer success",
+      "always-on specialist embedded in the team's workflow",
+      "cross-channel operator rather than a single-window bot",
+      "system that can answer, guide, identify intent, escalate, and learn"
+    ],
+    "doNotReduceTo": [
+      "generic chatbot",
+      "FAQ widget",
+      "simple autoresponder",
+      "UI wrapper on top of an LLM"
+    ]
+  },
+  "problems": [
+    "Overseas or global-facing product has no functioning community surface yet.",
+    "Existing Discord or community channel lacks maintenance quality.",
+    "User questions arrive across channels and human coverage is inconsistent.",
+    "Repetitive support work consumes the team without increasing leverage.",
+    "Purchase or demo intent appears in community conversations but gets missed.",
+    "The team lacks structured insight into sentiment, churn risk, and recurring friction."
+  ],
+  "capabilities": [
+    {
+      "name": "userIssueResolution",
+      "summary": "Responds to user questions across community and support channels and escalates when needed."
+    },
+    {
+      "name": "knowledgeBaseManagement",
+      "summary": "Builds and updates enterprise knowledge from docs, PDFs, FAQs, events, web content, and conversations."
+    },
+    {
+      "name": "customerSuccessActivation",
+      "summary": "Guides new users, shares best practices, and proactively supports under-activated users."
+    },
+    {
+      "name": "leadAndIntentCapture",
+      "summary": "Detects pricing, demo, and partnership intent and hands opportunities to the team."
+    },
+    {
+      "name": "relationshipIntelligence",
+      "summary": "Tracks user history, preferences, sentiment, satisfaction change, and churn risk."
+    },
+    {
+      "name": "multiPlatformOperations",
+      "summary": "Runs across multiple channels as a unified operating layer."
+    }
+  ],
+  "channels": [
+    "Discord",
+    "Telegram",
+    "Slack",
+    "Feishu",
+    "website widget"
+  ],
+  "architectureHighlights": [
+    "source parsing",
+    "structured extraction",
+    "1536-dimensional embeddings",
+    "deduplication and updates",
+    "unified knowledge table",
+    "hybrid retrieval",
+    "reranking",
+    "API delivery layer"
+  ],
+  "operationalTraits": [
+    "multi-tenant isolation via company_id",
+    "real-time learning from new conversations",
+    "continuous knowledge improvement through actual use"
+  ],
+  "idealCustomerProfile": [
+    "global-facing products",
+    "AI tools",
+    "hardware products",
+    "content platforms",
+    "SaaS products",
+    "small teams without a dedicated community operator",
+    "teams with fast user growth and limited support bandwidth",
+    "teams with an existing Discord community but weak maintenance"
+  ],
+  "businessContextSignals": [
+    "response speed influences retention",
+    "community influences retention and word-of-mouth",
+    "repetitive operations are a strong target for AI leverage",
+    "competitors are starting to use AI in community operations"
+  ],
+  "currentStatus": {
+    "version": "Lucius 2.0",
+    "customerExamples": [
+      "Dubbing AI (Discord)",
+      "Jarsy (Telegram and Discord)",
+      "Lovart (Discord)"
+    ]
+  },
+  "translationAnchors": [
+    "Lucius is an AI teammate, not a decorative assistant.",
+    "Lucius works inside real operating channels, not in an abstract AI space.",
+    "Lucius should be associated with accurate help, continuous coverage, and operational follow-through.",
+    "Lucius reduces missed questions, missed leads, and missed insight.",
+    "Lucius is not only reactive support; it also drives user success and surfaces business intelligence."
+  ],
+  "commercialNotes": {
+    "useOnlyWhenExplicitlyNeeded": [
+      "Community Starter",
+      "Community Upgrade",
+      "$5,000 pricing",
+      "$3,000/month pricing",
+      "7-day activation promise",
+      "30-day activation framing",
+      "booking CTA copy",
+      "phone-number outreach copy"
+    ]
+  },
+  "overclaimGuardrails": [
+    "Do not invent exact response-time metrics.",
+    "Do not invent exact resolution-rate metrics.",
+    "Do not claim universal platform support beyond documented channels.",
+    "Do not imply autonomous action beyond documented workflows.",
+    "Do not claim specific revenue impact without proof."
+  ]
+}

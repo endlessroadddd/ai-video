@@ -1,0 +1,65 @@
+{
+  "persistentConstraints": {
+    "brandConstraints": {
+      "colorRoles": [
+        "Use neutral off-brand colors for the broken assistant UI.",
+        "Reserve stronger contrast for payment failure and blocked states.",
+        "Use Lucius purple only as a restrained closing-tag quality cue."
+      ],
+      "typeRoles": [
+        "Use sans-serif only in the negative example UI.",
+        "Use one strong headline layer with restrained support labels.",
+        "Keep any Lucius closing tag secondary."
+      ],
+      "radiusRules": [
+        "Use soft, consistent rounded corners across chat and payment surfaces.",
+        "Do not mix incompatible corner languages."
+      ],
+      "backgroundRules": [
+        "Use a warm neutral background with quiet depth.",
+        "Keep the background restrained so the proof element remains dominant."
+      ],
+      "graphicLanguage": [
+        "Use clean SaaS UI surfaces and minimal chrome.",
+        "Avoid decorative clutter or joke framing."
+      ],
+      "motionTone": [
+        "Motion should feel quietly confident and readable.",
+        "The final proof state should end in a dead-stop hold."
+      ],
+      "prohibitedPatterns": [
+        "No flashy AI magic or glitch spectacle.",
+        "No overlapping text blocks.",
+        "No competing animated elements on the same screen."
+      ]
+    },
+    "baseMotionConstraints": {
+      "onePrimaryMotionPerScreen": true,
+      "lessIsMore": true,
+      "minimalCopy": true,
+      "noTextOverlap": true,
+      "singleProofPath": true,
+      "quietlyConfidentMotion": true
+    }
+  },
+  "alreadyInRepo": [
+    "Lucius brand rules and tokens",
+    "Case-level product context and design guideline",
+    "Short asset micro-concept and metadata",
+    "CSS/React project template for browser-first short assets"
+  ],
+  "requiredFromUser": [],
+  "optionalEnhancements": [
+    "Real payment UI screenshots if an exact product-specific checkout needs to be recreated later",
+    "Real copy wording from the target product if legal or brand review requires exact phrasing",
+    "Additional icon or illustration references if a stronger SaaS marketing treatment is desired"
+  ],
+  "uiReferences": [
+    "Current generic support chat treatment in the existing asset",
+    "Current payment panel composition already built in the initial browser/video proof version"
+  ],
+  "copyDependencies": [
+    "Final approval of short on-screen lines if a stricter brand voice pass is needed"
+  ],
+  "blockers": []
+}

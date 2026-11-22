@@ -1,0 +1,296 @@
+{
+  "assetSlug": "thought-you-were-staff",
+  "aspectRatio": "16:9",
+  "durationTarget": 8.8,
+  "persistentConstraints": {
+    "brandConstraints": {
+      "colorRoles": [
+        "Use Warm Ivory as the field and Lucius Purple as the Lucius anchor.",
+        "Use Lavender Mist and Orchid Bloom only as restrained atmosphere.",
+        "Keep the user phone slightly cooler and more neutral than the Lucius phone."
+      ],
+      "typeRoles": [
+        "Use SF Pro for device UI, messages, and proof chips.",
+        "Use Recoleta only in the final proof sentence.",
+        "Avoid oversized poster type during the dialogue screens."
+      ],
+      "radiusRules": [
+        "Both devices should use coherent rounded hardware language.",
+        "Message bubbles and proof chips should share one soft-corner system."
+      ],
+      "backgroundRules": [
+        "Use one full-bleed Lucius stage only.",
+        "Do not introduce page modules or dashboard framing."
+      ],
+      "graphicLanguage": [
+        "Use device choreography instead of page composition.",
+        "Keep the phones as the only major compositional objects."
+      ],
+      "motionTone": [
+        "Motion should feel cinematic, restrained, and readable.",
+        "The squeeze transition should feel spatial, not flashy."
+      ],
+      "prohibitedPatterns": [
+        "No Discord chrome.",
+        "No landing-page grammar.",
+        "No full-page chat layout.",
+        "No footer proof bar.",
+        "No literal tipping copy."
+      ]
+    },
+    "baseMotionConstraints": {
+      "onePrimaryMotionPerScreen": true,
+      "lessIsMore": true,
+      "minimalCopy": true,
+      "noTextOverlap": true,
+      "singleProofPath": true,
+      "quietlyConfidentMotion": true
+    }
+  },
+  "styleMapping": {
+    "colorRoles": [
+      "Warm Ivory field with Lucius Purple reserved for the left device and final resolve.",
+      "Lavender Mist and Orchid Bloom stay atmospheric only.",
+      "Use deep warm neutrals for bezels, text, and shadows."
+    ],
+    "typeRoles": [
+      "SF Pro for all device and message copy.",
+      "Recoleta for the final proof sentence only."
+    ],
+    "radiusRules": [
+      "Use a consistent rounded-hardware system for both phones.",
+      "Use one soft message-bubble radius language."
+    ],
+    "spacingRules": [
+      "Both phones occupy roughly half the width.",
+      "Outer edges are cropped by frame and inner edges face center with slight perspective.",
+      "The proof chip lives only near the center seam during screen 5."
+    ],
+    "backgroundRules": [
+      "Use a single full-bleed stage with calm atmosphere.",
+      "Do not introduce any page sections or dashboard modules."
+    ],
+    "motionRules": [
+      "Root preview loops the full sequence.",
+      "Use one primary motion per screen.",
+      "Freeze ?screen=1..6 at clear review states."
+    ],
+    "prohibitedPatterns": [
+      "No hero sections.",
+      "No service strip graphics.",
+      "No footer bars.",
+      "No literal dashboard proofing."
+    ]
+  },
+  "screens": [
+    {
+      "screenId": "screen-01-question-send",
+      "goal": "Establish the dual-phone conversation as already alive and credible.",
+      "uiSurface": "full-bleed Lucius stage with two half-screen phone frames",
+      "layout": [
+        "Place the Lucius phone on the left with subtle brand tinting.",
+        "Place the user phone on the right with a more neutral surface.",
+        "Show real chat histories already in both phones at low prominence.",
+        "Activate the right composer at the bottom of the right phone."
+      ],
+      "background": [
+        "Warm Ivory field.",
+        "Soft off-center atmosphere behind both devices.",
+        "No page scaffolding."
+      ],
+      "copy": [
+        "Also, your product is really good. Why did you build it?"
+      ],
+      "primaryMotion": "The right-side message types and sends.",
+      "motionSequence": [
+        "Cursor blinks in the right composer.",
+        "Copy types on.",
+        "Bubble lifts into the thread."
+      ],
+      "proofElement": [
+        "The exchange feels like a live support continuation."
+      ],
+      "requiredAssets": [
+        "Lucius logo assets",
+        "Recoleta font",
+        "SF Pro stack"
+      ],
+      "timingHint": "1.45s"
+    },
+    {
+      "screenId": "screen-02-lucius-answer",
+      "goal": "Make Lucius's response feel specific and teammate-like.",
+      "uiSurface": "same dual-phone stage with emphasis leaning left",
+      "layout": [
+        "Keep the user's question visible in the right phone.",
+        "Activate the left composer or status line with Thinking....",
+        "Stream or type the Lucius answer into the left thread."
+      ],
+      "background": [
+        "Same stage.",
+        "Subtly strengthen Lucius purple emphasis on the left."
+      ],
+      "copy": [
+        "Haha, thank you. We kept seeing the same support questions, so we built the product we wished we'd had."
+      ],
+      "primaryMotion": "The Lucius answer generates into the left thread.",
+      "motionSequence": [
+        "Thinking dots appear.",
+        "Reply bubble generates.",
+        "Message settles."
+      ],
+      "proofElement": [
+        "Lucius sounds human and specific, not templated."
+      ],
+      "requiredAssets": [
+        "Lucius logo assets",
+        "SF Pro stack"
+      ],
+      "timingHint": "1.75s"
+    },
+    {
+      "screenId": "screen-03-human-assumption",
+      "goal": "Prove the user now assumes they are talking to a real support person.",
+      "uiSurface": "same dual-phone stage",
+      "layout": [
+        "Hold the Lucius answer on the left.",
+        "Reactivate the right composer.",
+        "Send a praise-driven follow-up in the right phone."
+      ],
+      "background": [
+        "Same stage.",
+        "No new modules."
+      ],
+      "copy": [
+        "You've been incredibly helpful. What's your name? I want to tell your team."
+      ],
+      "primaryMotion": "The right-side praise message types and sends.",
+      "motionSequence": [
+        "Right composer activates.",
+        "Text types on faster than screen 1.",
+        "Praise bubble enters."
+      ],
+      "proofElement": [
+        "The user clearly treats Lucius like a human teammate."
+      ],
+      "requiredAssets": [
+        "SF Pro stack"
+      ],
+      "timingHint": "1.35s"
+    },
+    {
+      "screenId": "screen-04-lucius-reveal",
+      "goal": "Land the reveal cleanly while staying inside the chat rhythm.",
+      "uiSurface": "same stage with the left device now more obviously Lucius-owned",
+      "layout": [
+        "Keep the praise bubble readable on the right.",
+        "Animate a short pause on the left.",
+        "Reveal the Lucius reply bubble.",
+        "Slightly strengthen Lucius identity in the left header during or right after the reply."
+      ],
+      "background": [
+        "Same stage.",
+        "A restrained left-side aura only."
+      ],
+      "copy": [
+        "I'm Lucius, actually. Not a human agent, but thank you."
+      ],
+      "primaryMotion": "The Lucius reveal message appears.",
+      "motionSequence": [
+        "Brief thinking hold.",
+        "Reveal bubble enters.",
+        "Brand identifiers on the left become clearer."
+      ],
+      "proofElement": [
+        "The reveal is explicit without breaking tone."
+      ],
+      "requiredAssets": [
+        "Lucius logo assets",
+        "SF Pro stack"
+      ],
+      "timingHint": "1.15s"
+    },
+    {
+      "screenId": "screen-05-wow-shift-proof",
+      "goal": "Let the user reaction and no-handoff proof resolve together through choreography.",
+      "uiSurface": "same stage transitioning into a left-dominant frame",
+      "layout": [
+        "Keep reveal context visible.",
+        "Right composer changes to Thinking....",
+        "Wow. appears in the right thread.",
+        "Center seam hosts a compact chip with 0 handoff requests."
+      ],
+      "background": [
+        "Same stage.",
+        "Motion energy concentrated through the seam."
+      ],
+      "copy": [
+        "Thinking...",
+        "Wow.",
+        "0 handoff requests"
+      ],
+      "primaryMotion": "The right phone is squeezed off-screen while the left phone takes center and the proof chip lands.",
+      "motionSequence": [
+        "Right composer changes state.",
+        "Wow. appears.",
+        "Right device moves right.",
+        "Left device slides center.",
+        "Proof chip resolves between them."
+      ],
+      "proofElement": [
+        "There was no transfer to a human.",
+        "The reveal still stays inside one conversation arc."
+      ],
+      "requiredAssets": [
+        "SF Pro stack"
+      ],
+      "timingHint": "1.55s"
+    },
+    {
+      "screenId": "screen-06-logo-resolve",
+      "goal": "Finish on Lucius, not on chat UI.",
+      "uiSurface": "centered Lucius device resolving into Lucius brand lockup",
+      "layout": [
+        "Centered device zooms toward camera.",
+        "Device dissolves into the Lucius mark and wordmark.",
+        "Final proof sentence rises in below."
+      ],
+      "background": [
+        "Same field.",
+        "Calmest state.",
+        "Minimal atmosphere."
+      ],
+      "copy": [
+        "Support that feels human. No handoff required."
+      ],
+      "primaryMotion": "The centered Lucius device resolves into the logo.",
+      "motionSequence": [
+        "Center push-in.",
+        "Logo resolve.",
+        "Proof sentence slides up softly."
+      ],
+      "proofElement": [
+        "The final line inherits both the human-feeling and no-handoff claims."
+      ],
+      "requiredAssets": [
+        "Lucius logo assets",
+        "Recoleta font",
+        "SF Pro stack"
+      ],
+      "timingHint": "1.55s"
+    }
+  ],
+  "implementationNotes": [
+    "Recreate the asset as a minimal React/Vite project.",
+    "Root route autoplays the whole animation loop.",
+    "Freeze ?screen=1..6 at fixed timeline timestamps.",
+    "Draw the phones directly in code and CSS instead of using external mockup files."
+  ],
+  "acceptanceChecks": [
+    "First glance reads as two devices in conversation, not as a page.",
+    "Screen 2 makes the Lucius answer feel naturally human.",
+    "Screen 3 clearly shows the user assuming Lucius is a person.",
+    "Screen 5 clearly lands both Wow. and 0 handoff requests while the devices squeeze apart.",
+    "Screen 6 clearly resolves to Lucius before the proof sentence becomes the secondary read."
+  ]
+}

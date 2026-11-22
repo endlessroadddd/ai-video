@@ -1,0 +1,10 @@
+{
+  "durationTarget": 8.8,
+  "aspectRatio": "16:9",
+  "soundMode": "silent-first",
+  "singleTakeaway": "Lucius can sound human enough to be mistaken for a teammate, and the conversation never needs a human handoff.",
+  "hookType": "proof",
+  "brandRole": "closing-tag",
+  "platformSurface": "split-surface",
+  "proofShot": "A user mistakes Lucius for a human teammate, then the right phone is squeezed away as 0 handoff requests resolves between the two devices."
+}

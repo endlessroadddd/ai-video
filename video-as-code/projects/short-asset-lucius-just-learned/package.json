@@ -1,0 +1,33 @@
+{
+  "name": "short-asset-lucius-just-learned",
+  "version": "1.0.0",
+  "description": "Lucius 2K Remotion short video: self-resolution rate learning curve.",
+  "repository": {},
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@remotion/cli": "4.0.454",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.454"
+  },
+  "devDependencies": {
+    "@remotion/eslint-config-flat": "4.0.454",
+    "@types/react": "19.2.7",
+    "@types/web": "0.0.166",
+    "eslint": "9.19.0",
+    "prettier": "3.8.1",
+    "typescript": "5.7.3"
+  },
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion bundle",
+    "render": "remotion render LuciusJustLearned ../渲染输出/lucius-just-learned-2k-60fps.mp4 --codec=h264 --pixel-format=yuv420p",
+    "still": "remotion still LuciusJustLearned ../渲染输出/lucius-just-learned-frame-7_5s.png --frame=450",
+    "still:small": "remotion still LuciusJustLearned --scale=0.25 --frame=450",
+    "lint": "eslint src && tsc"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}
