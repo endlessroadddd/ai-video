@@ -1,6 +1,4 @@
-# DFvision
-
-> 本仓库以 [FANzR-arch/DFvision](https://github.com/FANzR-arch/DFvision) 的 `9b9b235dea1e63ee988134a50b927e12db804c35` 版本为基础迁入，保留原项目的代码、素材和工作流文档。原作者及来源见链接；本仓库中的修复记录见 [MIGRATION.md](MIGRATION.md)。
+# ai视频制作
 
 用代码做视频。这里是一整套动效视频的**生产方法 + 素材库 + 32 个能直接跑起来的视频工程源码**。
 
